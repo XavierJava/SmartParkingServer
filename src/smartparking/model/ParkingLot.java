@@ -1,16 +1,24 @@
 package smartparking.model;
 
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable
 public class ParkingLot {
-    @DatabaseField(id = true)
+    @DatabaseField(generatedId=true)
     private int id;
 
+    @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
     private String name;
+
+    @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
     private String address;
+
+    @DatabaseField(canBeNull = false)
     private int numPlaces;
+
+    @DatabaseField(canBeNull = false)
     private double hourlyPrice;
 
     public ParkingLot() {
