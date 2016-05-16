@@ -16,7 +16,7 @@ public class Server {
 
         String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
 
-        ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, "root", "1026@ustc");
+        ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, "root", "***");
 
         UserService userService = new UserServiceImpl(connectionSource);
 
