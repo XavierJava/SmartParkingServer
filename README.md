@@ -10,17 +10,15 @@
 
 ## 模块组成
 
-### 服务器
-
-### 客户端
+服务器 & 客户端
 
 ## 主要技术
 
-### Linux, Git版本管理
+### 安装Ubuntu 16.04 64位桌面版 （建议双系统）
 
-Ubuntu 16.04 64 bit Desktop
+http://www.ubuntu.com/
 
-Github
+### 安装Git版本管理工具
 
 sudo apt-get install git
 
@@ -28,40 +26,37 @@ sudo apt-get install git
 
 sudo apt-get install mysql-server
 
-### Java/Android
+### 安装Java 8.0最新版本
 
-* Java 8.0 (http://www.oracle.com)
+http://www.oracle.com/
 
-* Android SDK (...)
+### 安装IntelliJ IDEA Java开发环境最新版本
 
-* IDE: IntelliJ IDEA (http://www.jetbrains.com/)
+http://www.jetbrains.com/
 
+### 熟悉、使用ORM
 
-### HTML5、跨平台
+ORMLite:
+http://www.ormlite.com/
 
-### SOA、Restful API
+### 熟悉、使用Restful API设计
 
-### ORM = Object Relational Mapping
-
-### 停车大数据分析、预测、利用
-
-## Java库
-
-ORMLite、Restlet
+Restlet:
+http://www.restlet.com/
 
 ## 项目分工
 
 近期集中于后台功能的开发。
 
-男生：
+### 男生
 
-ORM、Service
+代码：ORM、Service、Restful API实现。
 
-女生：
+### 女生
 
-Restful API实现、停车业务功能的整理
+文档：竞赛相关报名材料的准备、停车业务功能的整理。
 
-### Project URL
+## Github项目链接
 
 https://github.com/mcai/SmartParkingServer.git
 
