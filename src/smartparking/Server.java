@@ -1,11 +1,10 @@
 package smartparking;
 
-import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
-import com.j256.ormlite.table.TableUtils;
-import smartparking.model.ParkingLot;
+import smartparking.model.User;
+import smartparking.service.UserService;
+import smartparking.service.UserServiceImpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,19 +16,29 @@ public class Server {
 
         String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
 
-        ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, "root", "***");
+        ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, "root", "1026@ustc");
 
-        Dao<ParkingLot, Integer> parkingLotDao = DaoManager.createDao(connectionSource, ParkingLot.class);
+        UserService userService = new UserServiceImpl(connectionSource);
 
-        TableUtils.createTableIfNotExists(connectionSource, ParkingLot.class);
+        userService.addUser(new User("name", "idCard", "plate", true));
 
-        ParkingLot parkingLot = new ParkingLot("北工大西门停车场", "西大望路", 100, 2);
-        parkingLotDao.create(parkingLot);
+        List<User> users = userService.getUsers();
 
-        ParkingLot parkingLot2 = new ParkingLot("大望路停车场", "地铁大望路站", 200, 3);
-        parkingLotDao.create(parkingLot2);
+        for(User user: users) {
+            System.out.println(user);
+        }
 
-        List<ParkingLot> parkingLots = parkingLotDao.queryForAll();
+//        Dao<ParkingLot, Integer> parkingLotDao = DaoManager.createDao(connectionSource, ParkingLot.class);
+//
+//        TableUtils.createTableIfNotExists(connectionSource, ParkingLot.class);
+//
+//        ParkingLot parkingLot = new ParkingLot("北工大西门停车场", "西大望路", 100, 2);
+//        parkingLotDao.create(parkingLot);
+//
+//        ParkingLot parkingLot2 = new ParkingLot("大望路停车场", "地铁大望路站", 200, 3);
+//        parkingLotDao.create(parkingLot2);
+//
+//        List<ParkingLot> parkingLots = parkingLotDao.queryForAll();
 
         connectionSource.close();
     }

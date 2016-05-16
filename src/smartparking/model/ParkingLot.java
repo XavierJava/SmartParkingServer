@@ -4,6 +4,8 @@ import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Date;
+
 @DatabaseTable
 public class ParkingLot {
     @DatabaseField(generatedId=true)
@@ -20,6 +22,9 @@ public class ParkingLot {
 
     @DatabaseField(canBeNull = false)
     private double hourlyPrice;
+
+    @DatabaseField(canBeNull = false)
+    private Date date;
 
     public ParkingLot() {
     }
