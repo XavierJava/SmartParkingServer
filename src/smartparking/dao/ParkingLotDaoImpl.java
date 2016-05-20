@@ -20,6 +20,13 @@ public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> {
         return super.queryForAll();
     }
 
+    /**
+     * fdfdfdfdfd.
+     *
+     * @param id fdffd
+     * @return fdfdf
+     * @throws SQLException fffdf
+     */
     public ParkingLot getParkingLotById(int id) throws SQLException {
         return super.queryForId(id);
     }
