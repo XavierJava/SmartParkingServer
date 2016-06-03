@@ -9,7 +9,6 @@ import java.util.List;
  * Created by chenhuanhuan on 16-5-20.
  */
 public interface UserDao {
-    //return all users
     List getUsers() throws SQLException;
 
     User getUserById(int userid) throws SQLException;

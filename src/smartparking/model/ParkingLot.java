@@ -7,36 +7,61 @@ import smartparking.dao.ParkingLotDaoImpl;
 
 @DatabaseTable(tableName = "t_parkingLots", daoClass = ParkingLotDaoImpl.class)
 public class ParkingLot {
-    //ID auto created
+    //停车场的编号
     @DatabaseField(generatedId = true)
     private int id;
-    //lot's name
+    //停车场的名字
     @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
     private String name;
-    //lot's address
+    //停车场的详细地址
     @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
     private String address;
-    //total parking spaces
+    //经纬度
+    @DatabaseField(canBeNull = false)
+    private double longitude;
+    @DatabaseField(canBeNull = false)
+    private double latitude;
+    //总停车位
     @DatabaseField(canBeNull = false)
     private int totalSpaces;
-    //number of available parking spaces
+    //可用停车位
     @DatabaseField(canBeNull = false)
     private int availableSpaces;
-    //Price
+    //单价
     @DatabaseField(canBeNull = false)
     private double hourlyPrice;
-    //opening hours,from hour to hour daily
+    //营业时间从hh:mm到h2h2:m2m2
     @DatabaseField(canBeNull = true, dataType = DataType.STRING_BYTES)
     private String openingHours;
-    //something important,eg..whether open at weekends
+    //相关说明或者通知
     @DatabaseField(canBeNull = true, dataType = DataType.STRING_BYTES)
     private String notice;
+    @DatabaseField(persisted = false)
+    private double distance;
 
     public ParkingLot() {
     }
 
+    public ParkingLot(int id, String name, String address, double longitude, double latitude, int totalSpaces, int availableSpaces, double hourlyPrice, String openingHours, String notice, double distance) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.totalSpaces = totalSpaces;
+        this.availableSpaces = availableSpaces;
+        this.hourlyPrice = hourlyPrice;
+        this.openingHours = openingHours;
+        this.notice = notice;
+        this.distance = distance;
+    }
+
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -95,17 +120,44 @@ public class ParkingLot {
         this.notice = notice;
     }
 
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
     @Override
     public String toString() {
         return "ParkingLot{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
+                ", longitude=" + longitude +
+                ", latitude=" + latitude +
                 ", totalSpaces=" + totalSpaces +
                 ", availableSpaces=" + availableSpaces +
                 ", hourlyPrice=" + hourlyPrice +
                 ", openingHours='" + openingHours + '\'' +
                 ", notice='" + notice + '\'' +
+                ", distance=" + distance +
                 '}';
     }
 }

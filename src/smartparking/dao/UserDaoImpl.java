@@ -15,7 +15,6 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
         super(connectionSource, User.class);
     }
 
-    //return all users
     @Override
     public List getUsers() throws SQLException {
         return super.queryForAll();

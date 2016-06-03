@@ -32,7 +32,6 @@ public class ApiImpl implements Api {
         where.and(where.eq("name", name), where.eq("pswd", password));
         PreparedQuery preparedQuery = queryBuilder.prepare();
         userList = userDao.query(preparedQuery);
-        // System.out.println(userList.get(0));
         return userList.size() > 0;
     }
 }

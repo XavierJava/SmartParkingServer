@@ -24,6 +24,8 @@ public class Order {
     //amount of the order
     @DatabaseField(canBeNull = false)
     private double amount;
+    @DatabaseField
+    private boolean payed;
 
     public Order() {
         this.date = new Date();
@@ -63,6 +65,14 @@ public class Order {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    public boolean isPayed() {
+        return payed;
+    }
+
+    public void setPayed(boolean payed) {
+        this.payed = payed;
     }
 
     @Override
