@@ -26,7 +26,11 @@ public class SmartParkingServer extends Application {
         parkingLotDao = new ParkingLotDaoImpl(connectionSource);
         userDao = new UserDaoImpl(connectionSource);
         orderDao = new OrderDaoImpl(connectionSource);
-
+        setName("RESTful Smart Parking Server application");
+        setDescription("I am smartparking application's server side.");
+        setOwner("BJUT");
+        setAuthor("The SmartParking Team @ BJUT");
+        //setStatusService(new SmartParkingStatusService());
     }
 
     public static void main(String[] args) throws Exception {
@@ -39,6 +43,7 @@ public class SmartParkingServer extends Application {
     @Override
     public Restlet createInboundRoot() {
         Router router = new Router(getContext());
+        router.attach("/", RootServerResource.class);
         //GET
         router.attach("/user/{userId}",
                 UsersServerResource.class);

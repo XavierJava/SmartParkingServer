@@ -27,9 +27,6 @@ public class User {
     //gender
     @DatabaseField(canBeNull = true)
     private Boolean gender;
-    //birthDate
-    @DatabaseField(canBeNull = true)
-    private String BirthString;
     //register date,specified by Database!
     @DatabaseField(canBeNull = true, dataType = DataType.DATE_STRING)
     private Date regDate;
@@ -50,12 +47,8 @@ public class User {
         this.regDate = new Date();
         this.IPLevel = 0;
         this.howActivate = 0;
-    }
-
-    public User(int id, String name, String password) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
+        this.email = "";
+        this.phone = "";
     }
 
     public int getId() {
@@ -96,14 +89,6 @@ public class User {
 
     public void setGender(Boolean gender) {
         this.gender = gender;
-    }
-
-    public String getBirthString() {
-        return BirthString;
-    }
-
-    public void setBirthString(String birthString) {
-        BirthString = birthString;
     }
 
     public Date getRegDate() {
@@ -163,7 +148,6 @@ public class User {
                 ", idNo='" + idNo + '\'' +
                 ", plateNumber='" + plateNumber + '\'' +
                 ", gender=" + gender +
-                ", BirthString='" + BirthString + '\'' +
                 ", regDate=" + regDate +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +

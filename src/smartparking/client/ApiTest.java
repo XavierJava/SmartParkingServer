@@ -13,7 +13,7 @@ import java.sql.SQLException;
 /**
  * Created by chenhuanhuan on 16-5-20.
  */
-public class Test {
+public class ApiTest {
     public static void main(String[] args) throws SQLException, IOException {
         String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
         ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, "root", "chenhuan");

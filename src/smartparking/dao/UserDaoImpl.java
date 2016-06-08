@@ -21,8 +21,8 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
     }
 
     @Override
-    public User getUserById(int userid) throws SQLException {
-        return super.queryForId(userid);
+    public User getUserById(int userId) throws SQLException {
+        return super.queryForId(userId);
     }
 
     @Override
@@ -31,8 +31,13 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
     }
 
     @Override
-    public boolean addUser(User user) throws SQLException {
-        return super.create(user) > 0;
+    public String addUser(User user) throws SQLException {
+        if (getUserByName(user.getName()) != null)
+            return "请换一个用户名试试.";
+        if (super.create(user) > 0)
+            return "注册成功.";
+        else
+            return "注册失败";
     }
 
     @Override

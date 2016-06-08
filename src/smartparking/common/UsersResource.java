@@ -17,7 +17,7 @@ public interface UsersResource {
     public void removeUser(int userId) throws SQLException, IOException;
 
     @Post
-    public void addUser(Representation rep) throws SQLException, IOException;
+    public String addUser(Representation rep) throws SQLException, IOException;
 
     @Put
     public void updateUser(Representation rep) throws SQLException, IOException;

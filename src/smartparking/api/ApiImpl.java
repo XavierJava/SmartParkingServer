@@ -21,7 +21,7 @@ public class ApiImpl implements Api {
         User user = new User();
         user.setName(name);
         user.setPassword(password);
-        return userDao.addUser(user);
+        return userDao.addUser(user).equals("注册成功") ? true : false;
     }
 
     @Override
