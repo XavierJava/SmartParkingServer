@@ -36,6 +36,7 @@ public class ParkingLot {
     //相关说明或者通知
     @DatabaseField(canBeNull = true, dataType = DataType.STRING_BYTES)
     private String notice;
+    //保存与用户的距离，不持久化
     @DatabaseField(persisted = false)
     private double distance;
 

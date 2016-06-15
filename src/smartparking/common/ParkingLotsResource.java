@@ -1,7 +1,6 @@
 package smartparking.common;
 
 import org.restlet.representation.Representation;
-import org.restlet.resource.Delete;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
 import org.restlet.resource.Put;
@@ -11,14 +10,12 @@ import org.restlet.resource.Put;
  */
 public interface ParkingLotsResource {
     @Get
-    Representation getParkingLot() throws Exception;
+    Representation getParkingLots();
 
     @Put
-    void updateParkingLot(Representation rep) throws Exception;
+    String updateParkingLot(Representation rep);
 
     @Post
-    void addParkingLot(Representation rep) throws Exception;
+    String addParkingLot(Representation rep);
 
-    @Delete
-    void removeParkingLot(int parkingLotId) throws Exception;
 }

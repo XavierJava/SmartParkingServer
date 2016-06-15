@@ -12,17 +12,17 @@ import java.util.List;
  */
 public interface ParkingLotDao {
 
-    void addParkingLot(ParkingLot parkLot) throws SQLException;
+    int addParkingLot(ParkingLot parkLot);
 
-    void editParkingLot(ParkingLot parkingLot) throws SQLException;
+    int editParkingLot(ParkingLot parkingLot);
 
-    void removeParkingLotById(int id) throws SQLException;
+    int removeParkingLotById(int id);
 
-    GenericRawResults getNearbyParkingLots(double longitude, double altitude, int kilometers) throws IOException, SQLException;
+    GenericRawResults getNearParkingLots(double longitude, double altitude, int kilometers) throws IOException, SQLException;
 
-    List getParkingLots() throws SQLException;
+    List getParkingLots();
 
-    ParkingLot getParkingLotById(int id) throws SQLException;
+    ParkingLot getParkingLotById(int id);
 
-    ParkingLot getParkingLotByName(String name) throws SQLException;
+    ParkingLot getParkingLotByName(String name);
 }

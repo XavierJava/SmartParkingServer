@@ -5,6 +5,7 @@ import com.j256.ormlite.support.ConnectionSource;
 import smartparking.model.User;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,37 +17,68 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
     }
 
     @Override
-    public List getUsers() throws SQLException {
-        return super.queryForAll();
+    public List getUsers() {
+        List list = new ArrayList<User>();
+        try {
+            list = queryForAll();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return list;
     }
 
     @Override
-    public User getUserById(int userId) throws SQLException {
-        return super.queryForId(userId);
+    public User getUserById(int userId) {
+        User user = null;
+        try {
+            user = queryForId(userId);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return user;
     }
 
     @Override
-    public User getUserByName(String name) throws SQLException {
-        return super.queryForEq("name", name).get(0);
+    public User getUserByName(String name) {
+        User user = null;
+        try {
+            user = queryForEq("name", name).get(0);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return user;
     }
 
     @Override
-    public String addUser(User user) throws SQLException {
-        if (getUserByName(user.getName()) != null)
-            return "请换一个用户名试试.";
-        if (super.create(user) > 0)
-            return "注册成功.";
-        else
-            return "注册失败";
+    public int addUser(User user) {
+        int flag = 0;
+        try {
+            flag = create(user);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return flag;
     }
 
     @Override
-    public void editUser(User user) throws SQLException {
-        super.update(user);
+    public int editUser(User user) {
+        int flag = 0;
+        try {
+            flag = update(user);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return flag;
     }
 
     @Override
-    public void removeUserById(int id) throws SQLException {
-        super.deleteById(id);
+    public int removeUserById(int id) {
+        int flag = 0;
+        try {
+            flag = deleteById(id);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return flag;
     }
 }

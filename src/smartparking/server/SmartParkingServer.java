@@ -26,6 +26,9 @@ public class SmartParkingServer extends Application {
         parkingLotDao = new ParkingLotDaoImpl(connectionSource);
         userDao = new UserDaoImpl(connectionSource);
         orderDao = new OrderDaoImpl(connectionSource);
+        //TableUtils.createTableIfNotExists(connectionSource, User.class);
+        //TableUtils.createTableIfNotExists(connectionSource, ParkingLot.class);
+        //TableUtils.createTableIfNotExists(connectionSource, Order.class);
         setName("RESTful Smart Parking Server application");
         setDescription("I am smartparking application's server side.");
         setOwner("BJUT");
@@ -44,31 +47,29 @@ public class SmartParkingServer extends Application {
     public Restlet createInboundRoot() {
         Router router = new Router(getContext());
         router.attach("/", RootServerResource.class);
-        //GET
-        router.attach("/user/{userId}",
+        //GET,DELETE
+        router.attach("/users/{userId}",
+                UserServerResource.class);
+        //POST,PUT
+        router.attach("/users",
                 UsersServerResource.class);
-        //POST,PUT,DELETE
-        router.attach("/user",
-                UsersServerResource.class);
-        //GET
-        router.attach("/parkinglot/{parkingLotId}",
+        //GET,DELETE
+        router.attach("/parkinglots/{parkingLotId}",
+                ParkingLotServerResource.class);
+        //附近的停车场
+        router.attach("/parkinglots/latitude/{latitude}/longitude/{longitude}/radius/{radius}",
+                NearParkingLotsServerResource.class);
+        //POST,PUT
+        router.attach("/parkinglots",
                 ParkingLotsServerResource.class);
-        router.attach("/parkinglots/name/{parkingLotName}",
-                ParkingLotsServerResource.class);
-        router.attach("/parkinglots/near/{latitude-longitude-radius}",
-                ParkingLotsServerResource.class);
-        //POST,PUT,DELETE
-        router.attach("/parkinglot",
-                ParkingLotsServerResource.class);
-        //GET
-        router.attach("/order/{orderId}",
+        //GET,DELETE
+        router.attach("/orders/{orderId}",
                 OrdersServerResource.class);
-        router.attach("/user/orders/{userId}",
-                OrdersServerResource.class);
-        router.attach("/user/{userId}/parkinglot/{parkingLotId}",
-                OrdersServerResource.class);
-        //POST,PUT,DELETE
-        router.attach("/order",
+        //某用户的所有订单
+        router.attach("/users/{userId}/orders",
+                UserOrdersServerResource.class);
+        //POST,PUT
+        router.attach("/orders",
                 OrdersServerResource.class);
         /*ChallengeAuthenticator authenticator = new ChallengeAuthenticator(
                 getContext(), ChallengeScheme.HTTP_BASIC, "My Realm");

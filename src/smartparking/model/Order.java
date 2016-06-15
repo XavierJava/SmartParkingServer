@@ -19,7 +19,7 @@ public class Order {
     @DatabaseField(canBeNull = false, foreign = true, columnName = "id_user")
     private User user;
     //when it be generated,specified by constructor!
-    @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING)
+    @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING, format = "yyyy-MM-dd HH:mm:ss")
     private Date date;
     //amount of the order
     @DatabaseField(canBeNull = false)
@@ -29,6 +29,7 @@ public class Order {
 
     public Order() {
         this.date = new Date();
+        this.payed = false;
     }
 
     public int getId() {

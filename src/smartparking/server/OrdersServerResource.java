@@ -10,72 +10,55 @@ import smartparking.model.Order;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by chenhuanhuan on 16-5-23.
  */
 public class OrdersServerResource extends ServerResource implements OrdersResource {
-    //CopyOnWriteArrayList
-    int orderId = 0;
     OrderDaoImpl orderDao = null;
 
     @Override
     public void doInit() {
         super.doInit();
-        String orderIdAttribute = getAttribute("orderId");
-        System.out.println("订单id:" + orderIdAttribute);
-        System.out.println(getQueryValue("xp"));
         try {
             this.orderDao = new OrderDaoImpl(SingleConnectionSource.getConnectionSource());
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        if (orderIdAttribute != null) {
-            this.orderId = Integer.parseInt(orderIdAttribute);
-            setName("Resource for parking account '" + this.orderId + "'");
-            setDescription("The resource describing the parking account number '"
-                    + this.orderId + "'");
-        } else {
-            setName("parking account resource");
-            setDescription("The resource describing a parking account");
-        }
     }
 
 
     @Override
-    public Representation getOrder() throws SQLException {//多个订单
-        Order order = orderDao.getOrderById(orderId);
-        return new JacksonRepresentation<Order>(order);
+    public Representation getOrders() {
+        List orders = orderDao.getOrders();
+        return new JacksonRepresentation<>(orders);
     }
 
     @Override
-    public void addOrder(Representation rep) throws SQLException {
+    public String addOrder(Representation rep) {
         JacksonRepresentation<Order> orderRep = new JacksonRepresentation<Order>(
                 rep, Order.class);
         Order order = null;
         try {
             order = orderRep.getObject();
-            orderDao.addOrder(order);
         } catch (IOException E) {
             System.out.println(E.getMessage());
+            //setStatus(Status.SERVER_ERROR_INTERNAL,"服务器内部错误");
         }
+        return orderDao.addOrder(order) > 0 ? "新增成功" : "新增失败";
     }
 
     @Override
-    public void removeOrder(int orderId) throws SQLException {
-        orderDao.removeOrderById(orderId);
-    }
-
-    @Override
-    public void editOrder(Representation rep) throws SQLException {
+    public String editOrder(Representation rep) {
         JacksonRepresentation<Order> orderRep = new JacksonRepresentation<Order>(
                 rep, Order.class);
         Order order = null;
         try {
             order = orderRep.getObject();
-            orderDao.editOrder(order);
         } catch (IOException E) {
             System.out.println(E.getMessage());
         }
+        return orderDao.editOrder(order) > 0 ? "修改成功" : "修改失败";
     }
 }

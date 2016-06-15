@@ -2,26 +2,25 @@ package smartparking.dao;
 
 import smartparking.model.Order;
 
-import java.sql.SQLException;
 import java.util.List;
 
 /**
  * Created by chenhuanhuan on 16-5-20.
  */
 public interface OrderDao {
-    List<Order> getOrders() throws SQLException;
+    List<Order> getOrders();
 
-    Order getOrderById(int OrderId) throws SQLException;
+    Order getOrderById(int OrderId);
 
     Order getOrderByUserIdAndParkingLotId(int userId, int parkingLotId);
 
-    List<Order> getOrdersByUserId(int userId) throws SQLException;
+    List<Order> getOrdersByUserId(int userId);
 
-    List getOrdersByParkingLotId(int parkingLotId) throws SQLException;
+    List getOrdersByParkingLotId(int parkingLotId);
 
-    void addOrder(Order order) throws SQLException;
+    int addOrder(Order order);
 
-    void editOrder(Order order) throws SQLException;
+    int editOrder(Order order);
 
-    void removeOrderById(int id) throws SQLException;
+    int removeOrderById(int id);
 }

@@ -8,6 +8,7 @@ import com.j256.ormlite.support.ConnectionSource;
 import smartparking.model.Order;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDao {
@@ -16,13 +17,26 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
     }
 
     @Override
-    public List<Order> getOrders() throws SQLException {
-        return super.queryForAll();
+    public List<Order> getOrders() {
+        List list = new ArrayList();
+
+        try {
+            list = queryForAll();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return list;
     }
 
     @Override
-    public Order getOrderById(int OrderId) throws SQLException {
-        return super.queryForId(OrderId);
+    public Order getOrderById(int OrderId) {
+        Order order = null;
+        try {
+            order = queryForId(OrderId);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return order;
     }
 
     @Override
@@ -45,27 +59,57 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
     }
 
     @Override
-    public List<Order> getOrdersByUserId(int userId) throws SQLException {
-        return super.queryForEq("id_user", userId);
+    public List<Order> getOrdersByUserId(int userId) {
+        List list = null;
+        try {
+            list = queryForEq("id_user", userId);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return list;
     }
 
     @Override
-    public List getOrdersByParkingLotId(int parkingLotId) throws SQLException {
-        return super.queryForEq("lot_id", parkingLotId);
+    public List getOrdersByParkingLotId(int parkingLotId) {
+        List list = new ArrayList<Order>();
+        try {
+            list = queryForEq("lot_id", parkingLotId);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return list;
     }
 
     @Override
-    public void addOrder(Order order) throws SQLException {
-        super.create(order);
+    public int addOrder(Order order) {
+        int flag = 0;
+        try {
+            flag = create(order);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return flag;
     }
 
     @Override
-    public void editOrder(Order order) throws SQLException {
-        super.update(order);
+    public int editOrder(Order order) {
+        int flag = 0;
+        try {
+            flag = update(order);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return flag;
     }
 
     @Override
-    public void removeOrderById(int id) throws SQLException {
-        super.deleteById(id);
+    public int removeOrderById(int id) {
+        int flag = 0;
+        try {
+            flag = deleteById(id);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return flag;
     }
 }

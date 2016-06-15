@@ -10,7 +10,10 @@ import java.sql.SQLException;
  */
 public class SingleConnectionSource {
     static String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
-    static ConnectionSource connectionSource;
+    static private ConnectionSource connectionSource;
+
+    private SingleConnectionSource() {
+    }
 
     public static ConnectionSource getConnectionSource() {
         if (connectionSource == null) {
