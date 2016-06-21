@@ -3,16 +3,13 @@ package smartparking.client;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import smartparking.api.ApiImpl;
-import smartparking.dao.OrderDaoImpl;
-import smartparking.dao.ParkingLotDaoImpl;
-import smartparking.dao.UserDaoImpl;
+import smartparking.dao.impl.OrderDaoImpl;
+import smartparking.dao.impl.ParkingLotDaoImpl;
+import smartparking.dao.impl.UserDaoImpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-/**
- * Created by chenhuanhuan on 16-5-20.
- */
 public class ApiTest {
     public static void main(String[] args) throws SQLException, IOException {
         String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";

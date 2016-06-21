@@ -2,139 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60511a04-d37c-4275-897b-ea79771d852f" name="Default" comment="Update README.md.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smartparking/client/T.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gdata.client.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gdata.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gson.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.guava.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.guice.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gwt.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.protobuf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.sdc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.sun.jaxb.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.sun.syndication.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.thoughtworks.xstream.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.wordnik.swagger.annotations.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.wordnik.swagger.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.wordnik.swagger.models.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.inject.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.mail.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.servlet.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.ws.rs-api-2.0-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.ws.rs.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.jcip.annotations.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.oauth.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.sf.cglib.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.sourceforge.nekohtml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ognl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.aopalliance.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.codec.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.collections.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.dbcp.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.fileupload.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.io.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.lang.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.logging.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.pool.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.httpclient.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.httpcore.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.httpmime.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.james.mime4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.log4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.lucene.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.solr.common.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.solr.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.tika.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.tika.parsers.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.velocity.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.codehaus.jettison.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.codehaus.woodstox.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.codehaus.woodstox.stax2api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.emf.common.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.emf.ecore.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.emf.ecore.xmi.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.client.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.http.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.io.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.client.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.http.common.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.http.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.util.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.freemarker.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.hamcrest.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.javassist.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jboss.resteasy.jaxrs.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jdom.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jibx.runtime.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.joda.time.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.json.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jsslutils.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.junit.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.mongodb.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.openid4java.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.osgi.compendium.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.osgi.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.raml.parser.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.example.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.apispark.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.atom.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.crypto.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.e4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.emf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.fileupload.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.freemarker.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.gson.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.guice.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.gwt.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.html.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.httpclient.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jaas.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.javamail.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jaxb.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jaxrs.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jdbc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jetty.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jibx.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.json.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jsslutils.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.lucene.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.nio.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.oauth.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.odata.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.openid.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.raml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.rdf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.rome.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.sdc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.simple.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.sip.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.slf4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.spring.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.swagger.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.thymeleaf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.velocity.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.wadl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.xml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.xstream.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.test.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.simpleframework.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.simpleframework.xml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.slf4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.beans.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.context.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.expression.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.web.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.webmvc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.testng.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.thymeleaf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.yaml.snakeyaml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/scala-library.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/scalap.jar" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/junit-4.12.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smartparking/resources/parkingLots/NearbyParkingLotsResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smartparking/resources/parkingLots/ParkingLotsResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/smartparking/client/OrdersTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smartparking/client/T.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smartparking/common/NearParkingLotsResource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smartparking/common/ParkingLotsResource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smartparking/verifer/LoginVerifier.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/common/OrderResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/orders/OrderResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/common/OrdersResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/orders/OrdersResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/common/ParkingLotResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/parkingLots/ParkingLotResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/common/RootResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/common/RootResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/common/UserOrdersResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/orders/UserOrdersResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/common/UserResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/users/UserResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/common/UsersResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/users/UsersResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/dao/OrderDaoImpl.java" afterPath="$PROJECT_DIR$/src/smartparking/dao/impl/OrderDaoImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/dao/ParkingLotDaoImpl.java" afterPath="$PROJECT_DIR$/src/smartparking/dao/impl/ParkingLotDaoImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/dao/SingleConnectionSource.java" afterPath="$PROJECT_DIR$/src/smartparking/SingleConnectionSource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/dao/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/smartparking/dao/impl/UserDaoImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/NearParkingLotsServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/NearbyParkingLotsServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/OrderServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/orders/impl/OrderServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/OrdersServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/orders/impl/OrdersServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/ParkingLotServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/ParkingLotServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/ParkingLotsServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/ParkingLotsServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/RootServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/common/impl/RootServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/SmartParkingServer.java" afterPath="$PROJECT_DIR$/src/smartparking/SmartParkingServer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/UserOrdersServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/orders/impl/UserOrdersServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/UserServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/users/impl/UserServerResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smartparking/server/UsersServerResource.java" afterPath="$PROJECT_DIR$/src/smartparking/resources/users/impl/UsersServerResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParkingLotServer.iml" afterPath="$PROJECT_DIR$/ParkingLotServer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smartparking/api/ApiImpl.java" afterPath="$PROJECT_DIR$/src/smartparking/api/ApiImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smartparking/client/ApiTest.java" afterPath="$PROJECT_DIR$/src/smartparking/client/ApiTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smartparking/model/Order.java" afterPath="$PROJECT_DIR$/src/smartparking/model/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smartparking/model/ParkingLot.java" afterPath="$PROJECT_DIR$/src/smartparking/model/ParkingLot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smartparking/model/User.java" afterPath="$PROJECT_DIR$/src/smartparking/model/User.java" />
     </list>
     <ignored path="ParkingLotServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -178,21 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SmartParkingServer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/smartparking/server/SmartParkingServer.java">
+        <entry file="file://$PROJECT_DIR$/src/smartparking/SmartParkingServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state vertical-scroll-proportion="2.5043478">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -203,8 +97,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -237,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/smartparking/service/DaoUtils.java" />
         <option value="$PROJECT_DIR$/src/smartparking/api/Api.java" />
         <option value="$PROJECT_DIR$/src/smartparking/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/smartparking/api/ApiImpl.java" />
         <option value="$PROJECT_DIR$/src/smartparking/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/smartparking/model/User.java" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -245,6 +138,34 @@
         <option value="$PROJECT_DIR$/src/smartparking/Server.java" />
         <option value="$PROJECT_DIR$/src/smartparking/dao/ParkingLotDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/smartparking/dao/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/api/ApiImpl.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/ParkingLotsResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/users/UserResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/RootResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/parkingLots/NearParkingLotsResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/parkingLots/ParkingLotResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/orders/OrderResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/orders/UserOrdersResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/users/UsersResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/parkingLots/ParkingLotsResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/common/orders/OrdersResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/dao/SingleConnectionSource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/SingleConnectionSource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/users/impl/UsersServerResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/common/RootResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/common/impl/RootServerResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/ParkingLotsServerResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/client/ApiTest.java" />
+        <option value="$PROJECT_DIR$/test/smartparking/client/ClientTest.java" />
+        <option value="$PROJECT_DIR$/test/smartparking/client/OrdersTest.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/dao/impl/ParkingLotDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/orders/impl/UserOrdersServerResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/orders/impl/OrdersServerResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/orders/OrdersResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/NearParkingLotsServerResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/NearbyParkingLotsServerResource.java" />
+        <option value="$PROJECT_DIR$/src/smartparking/SmartParkingServer.java" />
       </list>
     </option>
   </component>
@@ -264,10 +185,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="width" value="1602" />
+    <option name="height" value="853" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -285,7 +206,7 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -295,7 +216,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,11 +244,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smartparking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -347,62 +271,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smartparking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ParkingLotServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartParkingServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartparking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ParkingLotServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartParkingServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -410,13 +296,22 @@
       <recent name="smartparking.api" />
       <recent name="smartparking.service" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/smartparking" />
+      <recent name="$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl" />
+      <recent name="$PROJECT_DIR$/src/smartparking/resources/orders/impl" />
+      <recent name="$PROJECT_DIR$/src/smartparking/resources/common/impl" />
+      <recent name="$PROJECT_DIR$/src/smartparking/resources/common" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/smartparking/dao" />
+      <recent name="$PROJECT_DIR$/src/smartparking/common/users" />
+      <recent name="$PROJECT_DIR$/src/smartparking/common/parkingLots" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SmartParkingServer">
+  <component name="RunManager">
     <configuration default="false" name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -457,10 +352,115 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="OrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="smartparking.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ParkingLotServer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="smartparking.client" />
+      <option name="MAIN_CLASS_NAME" value="smartparking.client.OrdersTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SmartParkingServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="smartparking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="smartparking.SmartParkingServer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ParkingLotServer" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -654,20 +654,22 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Server" />
       <item index="1" class="java.lang.String" itemvalue="Application.SmartParkingServer" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.OrdersTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SmartParkingServer (1)" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.SmartParkingServer" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Server" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OrdersTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SmartParkingServer (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SmartParkingServer" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -676,7 +678,6 @@
       <changelist id="60511a04-d37c-4275-897b-ea79771d852f" name="Default" comment="" />
       <created>1462861859324</created>
       <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
       <updated>1462861859324</updated>
       <workItem from="1462861867065" duration="2751000" />
       <workItem from="1462864641586" duration="28000" />
@@ -687,74 +688,73 @@
     <task id="LOCAL-00001" summary="创建项目.">
       <created>1462862193202</created>
       <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1462862193202</updated>
     </task>
     <task id="LOCAL-00002" summary="添加文件 vcs.xml.">
       <created>1462862222683</created>
       <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1462862222683</updated>
     </task>
     <task id="LOCAL-00003" summary="集成 ORMLite.">
       <created>1462862872840</created>
       <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
       <updated>1462862872840</updated>
     </task>
     <task id="LOCAL-00004" summary="集成 ORMLite.">
       <created>1462864615229</created>
       <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1462864615229</updated>
     </task>
     <task id="LOCAL-00005" summary="集成 ORMLite.">
       <created>1462864663818</created>
       <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1462864663818</updated>
     </task>
     <task id="LOCAL-00006" summary="Add UserService and UserServiceImpl.">
       <created>1463384919868</created>
       <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1463384919868</updated>
     </task>
     <task id="LOCAL-00007" summary="Update README.md; add two reference documents.">
       <created>1463388646866</created>
       <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
       <updated>1463388646866</updated>
     </task>
     <task id="LOCAL-00008" summary="Update README.md.">
       <created>1463388993655</created>
       <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1463388993655</updated>
     </task>
     <task id="LOCAL-00009" summary="Update README.md.">
       <created>1463697195930</created>
       <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1463697195930</updated>
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ClientTest - 2016.06.21 at 15h 36m 18s.xml">
+      <configuration name="ClientTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrdersTest - 2016.06.21 at 15h 45m 07s.xml">
+      <configuration name="OrdersTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="9071000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="-1" y="24" width="1602" height="853" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -762,11 +762,13 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09508197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8060109" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37704918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32454038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32413352" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9373297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -776,10 +778,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -791,16 +791,16 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29480737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37983194" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6253406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37704918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31850675" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32413352" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9373297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -844,158 +844,360 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/SmartParkingServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/Server.java" />
+    <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/Server.java" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/service/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/service/UserService.java" />
     <entry file="file://$PROJECT_DIR$/src/smartparking/api/ApiImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/api/Api.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/ParkingLot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/Server.java" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/service/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/Server.java" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/service/UserServiceImpl.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08e974b5-8e63-4569-a32d-646d1929bd25/console.sql" />
-    <entry file="jar://$PROJECT_DIR$/lib/ormlite-jdbc-4.49-SNAPSHOT.jar!/com/j256/ormlite/jdbc/JdbcConnectionSource.class" />
-    <entry file="jar://$PROJECT_DIR$/lib/ormlite-core-4.49-SNAPSHOT.jar!/com/j256/ormlite/table/TableUtils.class" />
-    <entry file="jar://$PROJECT_DIR$/lib/ormlite-core-4.49-SNAPSHOT.jar!/com/j256/ormlite/field/DataType.class" />
-    <entry file="jar://$PROJECT_DIR$/lib/ormlite-core-4.49-SNAPSHOT.jar!/com/j256/ormlite/stmt/StatementExecutor.class" />
-    <entry file="jar://$PROJECT_DIR$/lib/ormlite-core-4.49-SNAPSHOT.jar!/com/j256/ormlite/field/DatabaseField.class" />
-    <entry file="jar://$PROJECT_DIR$/lib/ormlite-core-4.49-SNAPSHOT.jar!/com/j256/ormlite/dao/DaoManager.class" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/service/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/service/UserService.java" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParkingLotServer.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state vertical-scroll-proportion="0.0">
           <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state vertical-scroll-proportion="0.0">
           <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/dao/OrderDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/ParkingLot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/dao/ParkingLotDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08370044">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.30551627">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/dao/UserDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/smartparking/dao/OrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.23762377">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/users/UsersResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.407355">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/users/UserResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30551627">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/parkingLots/ParkingLotsResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23762377">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/parkingLots/ParkingLotResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/orders/OrderResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/orders/UserOrdersResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/dao/impl/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16973126">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/users/impl/UsersServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/common/RootResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/common/impl/RootServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/orders/impl/OrderServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/ParkingLotServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/ParkingLotsServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37340876">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/SingleConnectionSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4413013">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/client/ApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13578501">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.restlet.jar!/org/restlet/resource/ClientResource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3460972">
+          <caret line="157" column="11" selection-start-line="157" selection-start-column="11" selection-end-line="157" selection-end-column="11" />
+          <folding>
+            <element signature="e#5441#5442#0" expanded="true" />
+            <element signature="e#5500#5501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/ormlite-core-4.49.jar!/com/j256/ormlite/dao/BaseDaoImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21207659">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/dao/impl/ParkingLotDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/orders/impl/UserOrdersServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/orders/impl/OrdersServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13617021">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/orders/OrdersResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34042552">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/parkingLots/NearbyParkingLotsResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.068085104">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/parkingLots/impl/NearbyParkingLotsServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23829788">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/api/Api.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/api/ApiImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.034042552">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/client/OrderClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.25957447">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/smartparking/client/OrdersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/api/Api.java">
+    <entry file="file://$PROJECT_DIR$/src/smartparking/resources/users/impl/UserServerResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/Server.java" />
-    <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/smartparking/SmartParkingServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smartparking/server/SmartParkingServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state vertical-scroll-proportion="2.5043478">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1006,6 +1208,18 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1040,12 +1254,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>RestfulTest</last-edited>
+          <last-edited>ParkingLotServer</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

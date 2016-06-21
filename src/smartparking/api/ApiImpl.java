@@ -3,7 +3,7 @@ package smartparking.api;
 import com.j256.ormlite.stmt.PreparedQuery;
 import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.stmt.Where;
-import smartparking.dao.UserDaoImpl;
+import smartparking.dao.impl.UserDaoImpl;
 import smartparking.model.User;
 
 import java.sql.SQLException;
@@ -21,7 +21,7 @@ public class ApiImpl implements Api {
         User user = new User();
         user.setName(name);
         user.setPassword(password);
-        return userDao.addUser(user) > 0 ? true : false;
+        return userDao.addUser(user) > 0;
     }
 
     @Override

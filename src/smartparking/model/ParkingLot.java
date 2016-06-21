@@ -3,7 +3,7 @@ package smartparking.model;
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-import smartparking.dao.ParkingLotDaoImpl;
+import smartparking.dao.impl.ParkingLotDaoImpl;
 
 @DatabaseTable(tableName = "t_parkingLots", daoClass = ParkingLotDaoImpl.class)
 public class ParkingLot {
