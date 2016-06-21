@@ -1,4 +1,4 @@
-package smartparking;
+package smartparking.common;
 
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
@@ -15,6 +15,8 @@ public class Settings {
     private static final String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
     private static final String username = "root";
     private static final String password = "chenhuan";
+
+    public static final String SERVER_HOST = "http://localhost:8111";
 
     private static ConnectionSource connectionSource;
 

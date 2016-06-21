@@ -5,7 +5,7 @@ import org.restlet.ext.jackson.JacksonRepresentation;
 import org.restlet.representation.Representation;
 import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.ServerResource;
-import smartparking.Settings;
+import smartparking.common.Settings;
 import smartparking.dao.UserDao;
 import smartparking.model.User;
 import smartparking.resources.users.UsersResource;
@@ -32,7 +32,7 @@ public class UsersServerResource extends ServerResource implements UsersResource
     }
 
     @Override
-    public String updateUser(Representation rep) {
+    public int updateUser(Representation rep) {
         JacksonRepresentation<User> userRep = new JacksonRepresentation<User>(rep, User.class);
         User user = null;
         try {
@@ -40,11 +40,11 @@ public class UsersServerResource extends ServerResource implements UsersResource
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        return userDao.editUser(user) > 0 ? "修改成功" : "修改失败";
+        return userDao.editUser(user);
     }
 
     @Override
-    public String addUser(Representation rep) {
+    public int addUser(Representation rep) {
         JacksonRepresentation<User> userRep = new JacksonRepresentation<User>(rep, User.class);
         User user = null;
         try {
@@ -52,6 +52,6 @@ public class UsersServerResource extends ServerResource implements UsersResource
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        return userDao.addUser(user) > 0 ? "添加成功" : "添加失败";
+        return userDao.addUser(user);
     }
 }

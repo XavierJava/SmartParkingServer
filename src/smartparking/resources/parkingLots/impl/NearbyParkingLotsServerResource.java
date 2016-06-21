@@ -7,7 +7,7 @@ import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.Get;
 import org.restlet.resource.ResourceException;
 import org.restlet.resource.ServerResource;
-import smartparking.Settings;
+import smartparking.common.Settings;
 import smartparking.dao.ParkingLotDao;
 import smartparking.resources.parkingLots.NearbyParkingLotsResource;
 

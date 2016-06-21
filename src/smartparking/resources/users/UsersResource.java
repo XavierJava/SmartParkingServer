@@ -10,8 +10,8 @@ public interface UsersResource {
     Representation getUsers();
 
     @Post
-    String addUser(Representation rep);
+    int addUser(Representation rep);
 
     @Put
-    String updateUser(Representation rep);
+    int updateUser(Representation rep);
 }
