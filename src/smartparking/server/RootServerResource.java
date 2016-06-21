@@ -24,8 +24,8 @@
 
 package smartparking.server;
 
-import book.restlet.ch02.sec5.sub5.common.RootResource;
 import org.restlet.resource.ServerResource;
+import smartparking.common.RootResource;
 
 /**
  * Root resource implementation.
