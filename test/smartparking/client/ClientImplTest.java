@@ -2,17 +2,17 @@ package smartparking.client;
 
 import org.junit.Before;
 import org.junit.Test;
-import smartparking.api.Client;
+import smartparking.client.impl.ClientImpl;
 import smartparking.model.User;
 
 import java.io.IOException;
 
-public class ClientTest {
-    private Client client;
+public class ClientImplTest {
+    private ClientImpl clientImpl;
 
     @Before
     public void setUp() throws Exception {
-        client = new Client();
+        clientImpl = new ClientImpl();
     }
 
     @Test
@@ -24,9 +24,9 @@ public class ClientTest {
         user.setName(name);
         user.setPassword(password);
 
-        int newUserId = client.addUser(user);
+        int newUserId = clientImpl.addUser(user);
 
-        User user1 = client.getUserById(newUserId);
+        User user1 = clientImpl.getUserById(newUserId);
 
         assert user1.getName().equals(name);
         assert user1.getPassword().equals(password);
@@ -34,7 +34,7 @@ public class ClientTest {
 
     @Test
     public void testGetUser() throws IOException {
-        User user = client.getUserById(3);
+        User user = clientImpl.getUserById(3);
         assert user != null;
     }
 }

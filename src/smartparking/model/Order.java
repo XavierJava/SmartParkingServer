@@ -12,24 +12,29 @@ public class Order {
     //order's id
     @DatabaseField(generatedId = true)
     private int id;
+
     //parking lot's id
     @DatabaseField(canBeNull = false, foreign = true, columnName = "id_lot")
     private ParkingLot parkingLot;
+
     //user's id
     @DatabaseField(canBeNull = false, foreign = true, columnName = "id_user")
     private User user;
+
     //when it be generated,specified by constructor!
     @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING, format = "yyyy-MM-dd HH:mm:ss")
     private Date date;
+
     //amount of the order
     @DatabaseField(canBeNull = false)
     private double amount;
+
     @DatabaseField
-    private boolean payed;
+    private boolean paid;
 
     public Order() {
         this.date = new Date();
-        this.payed = false;
+        this.paid = false;
     }
 
     public int getId() {
@@ -68,12 +73,12 @@ public class Order {
         this.amount = amount;
     }
 
-    public boolean isPayed() {
-        return payed;
+    public boolean isPaid() {
+        return paid;
     }
 
-    public void setPayed(boolean payed) {
-        this.payed = payed;
+    public void setPaid(boolean paid) {
+        this.paid = paid;
     }
 
     @Override
