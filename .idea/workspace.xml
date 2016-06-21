@@ -2,138 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60511a04-d37c-4275-897b-ea79771d852f" name="Default" comment="Update README.md.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smartparking/client/T.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gdata.client.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gdata.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gson.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.guava.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.guice.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.gwt.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.protobuf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.google.sdc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.sun.jaxb.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.sun.syndication.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.thoughtworks.xstream.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.wordnik.swagger.annotations.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.wordnik.swagger.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/com.wordnik.swagger.models.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.inject.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.mail.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.servlet.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.ws.rs-api-2.0-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.ws.rs.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.jcip.annotations.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.oauth.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.sf.cglib.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/net.sourceforge.nekohtml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ognl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.aopalliance.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.codec.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.collections.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.dbcp.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.fileupload.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.io.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.lang.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.logging.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.pool.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.httpclient.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.httpcore.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.httpmime.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.james.mime4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.log4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.lucene.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.solr.common.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.solr.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.tika.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.tika.parsers.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.velocity.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.codehaus.jettison.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.codehaus.woodstox.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.codehaus.woodstox.stax2api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.emf.common.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.emf.ecore.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.emf.ecore.xmi.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.client.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.http.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.io.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.client.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.http.common.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.http.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.spdy.server.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.eclipse.jetty.util.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.freemarker.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.hamcrest.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.javassist.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jboss.resteasy.jaxrs.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jdom.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jibx.runtime.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.joda.time.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.json.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.jsslutils.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.junit.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.mongodb.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.openid4java.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.osgi.compendium.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.osgi.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.raml.parser.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.example.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.apispark.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.atom.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.crypto.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.e4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.emf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.fileupload.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.freemarker.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.gson.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.guice.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.gwt.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.html.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.httpclient.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jaas.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.javamail.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jaxb.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jaxrs.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jdbc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jetty.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jibx.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.json.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.jsslutils.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.lucene.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.nio.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.oauth.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.odata.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.openid.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.raml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.rdf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.rome.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.sdc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.simple.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.sip.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.slf4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.spring.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.swagger.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.thymeleaf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.velocity.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.wadl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.xml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.ext.xstream.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.restlet.test.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.simpleframework.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.simpleframework.xml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.slf4j.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.beans.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.context.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.core.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.expression.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.web.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.springframework.webmvc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.testng.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.thymeleaf.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.yaml.snakeyaml.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/scala-library.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/scalap.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ParkingLotServer.iws" />
@@ -181,18 +49,28 @@
       <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="380">
               <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmartParkingServer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SmartParkingServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/smartparking/server/SmartParkingServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="380">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -294,8 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,75 +202,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartparking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ParkingLotServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartParkingServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartparking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ParkingLotServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartParkingServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartparking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ParkingLotServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartParkingServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -766,7 +582,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32454038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17026378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -842,6 +658,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smartparking/server/SmartParkingServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -921,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,9 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,14 +805,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/Server.java" />
     <entry file="file://$PROJECT_DIR$/src/smartparking/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="380">
           <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
           <folding />
         </state>
@@ -994,8 +819,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smartparking/server/SmartParkingServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="380">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
