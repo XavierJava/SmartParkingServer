@@ -5,26 +5,21 @@ import org.restlet.ext.jackson.JacksonRepresentation;
 import org.restlet.representation.Representation;
 import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.ServerResource;
-import smartparking.SingleConnectionSource;
-import smartparking.dao.impl.UserDaoImpl;
+import smartparking.Settings;
+import smartparking.dao.UserDao;
 import smartparking.model.User;
 import smartparking.resources.users.UsersResource;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 public class UsersServerResource extends ServerResource implements UsersResource {
-    UserDaoImpl userDao;
+    UserDao userDao;
 
     @Override
     protected void doInit() {
         super.doInit();
-        try {
-            userDao = new UserDaoImpl(SingleConnectionSource.getConnectionSource());
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+        userDao = Settings.getUserDao();
     }
 
 
@@ -41,7 +36,7 @@ public class UsersServerResource extends ServerResource implements UsersResource
         JacksonRepresentation<User> userRep = new JacksonRepresentation<User>(rep, User.class);
         User user = null;
         try {
-            userRep.getObject();
+            user = userRep.getObject();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -59,5 +54,4 @@ public class UsersServerResource extends ServerResource implements UsersResource
         }
         return userDao.addUser(user) > 0 ? "添加成功" : "添加失败";
     }
-
 }

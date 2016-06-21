@@ -5,42 +5,36 @@ import org.restlet.ext.jackson.JacksonRepresentation;
 import org.restlet.representation.Representation;
 import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.ServerResource;
-import smartparking.SingleConnectionSource;
-import smartparking.dao.impl.UserDaoImpl;
+import smartparking.Settings;
 import smartparking.model.User;
 import smartparking.resources.users.UserResource;
 
-import java.sql.SQLException;
-
 public class UserServerResource extends ServerResource implements UserResource {
-    String userIdAttribute;
-    UserDaoImpl userDao;
+    private String userId;
 
     @Override
     protected void doInit() {
         super.doInit();
-        userIdAttribute = getAttribute("userId");
-        try {
-            userDao = new UserDaoImpl(SingleConnectionSource.getConnectionSource());
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+
+        userId = getAttribute("userId");
     }
 
     @Override
     public Representation getUser() {
-        if (userIdAttribute == null || !userIdAttribute.matches("^[0-9]*[1-9][0-9]*$"))
+        if (userId == null || !userId.matches("^[0-9]*[1-9][0-9]*$"))
             return new StringRepresentation("参数类型错误");
-        User user = null;
-        user = userDao.getUserById(Integer.parseInt(userIdAttribute));
+
+        User user = Settings.getUserDao().getUserById(Integer.parseInt(userId));
+
         return user == null ? new StringRepresentation("不存在该用户", MediaType.TEXT_PLAIN) :
                 new JacksonRepresentation<User>(user);
     }
 
     @Override
     public String removeUser() {
-        if (userIdAttribute == null || !userIdAttribute.matches("^[0-9]*[1-9][0-9]*$"))
+        if (userId == null || !userId.matches("^[0-9]*[1-9][0-9]*$"))
             return "参数类型错误";
-        return userDao.removeUserById(Integer.parseInt(userIdAttribute)) > 0 ? "删除成功" : "删除失败";
+
+        return Settings.getUserDao().removeUserById(Integer.parseInt(userId)) > 0 ? "删除成功" : "删除失败";
     }
 }

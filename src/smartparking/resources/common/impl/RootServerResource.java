@@ -31,9 +31,7 @@ import smartparking.resources.common.RootResource;
  * Root resource implementation.
  */
 public class RootServerResource extends ServerResource implements RootResource {
-
     public String represent() {
-        return "Welcome to the " + getApplication().getName() + " !";
+        return "Welcome to " + getApplication().getName() + "!";
     }
-
 }

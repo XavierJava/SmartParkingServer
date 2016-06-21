@@ -1,19 +1,12 @@
 package smartparking;
 
-import com.j256.ormlite.jdbc.JdbcConnectionSource;
-import com.j256.ormlite.support.ConnectionSource;
 import org.restlet.Application;
 import org.restlet.Component;
 import org.restlet.Restlet;
 import org.restlet.data.Protocol;
 import org.restlet.routing.Router;
-import smartparking.dao.OrderDao;
-import smartparking.dao.ParkingLotDao;
-import smartparking.dao.UserDao;
-import smartparking.dao.impl.OrderDaoImpl;
-import smartparking.dao.impl.ParkingLotDaoImpl;
-import smartparking.dao.impl.UserDaoImpl;
 import smartparking.resources.common.impl.RootServerResource;
+import smartparking.resources.orders.impl.OrderServerResource;
 import smartparking.resources.orders.impl.OrdersServerResource;
 import smartparking.resources.orders.impl.UserOrdersServerResource;
 import smartparking.resources.parkingLots.impl.NearbyParkingLotsServerResource;
@@ -26,14 +19,6 @@ import java.sql.SQLException;
 
 public class SmartParkingServer extends Application {
     public SmartParkingServer() throws SQLException {
-        String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
-
-        ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, "root", "chenhuan");
-
-        ParkingLotDao parkingLotDao = new ParkingLotDaoImpl(connectionSource);
-        UserDao userDao = new UserDaoImpl(connectionSource);
-        OrderDao orderDao = new OrderDaoImpl(connectionSource);
-
         setName("Smart Parking Server");
         setDescription("Smart Parking Server.");
         setOwner("BJUT Smart Parking Team");
@@ -57,7 +42,7 @@ public class SmartParkingServer extends Application {
 
         router.attach("/parkinglots", ParkingLotsServerResource.class);
 
-        router.attach("/orders/{orderId}", OrdersServerResource.class);
+        router.attach("/orders/{orderId}", OrderServerResource.class);
 
         router.attach("/orders_by_user/{userId}", UserOrdersServerResource.class);
 

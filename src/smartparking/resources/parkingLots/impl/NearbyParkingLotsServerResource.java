@@ -7,46 +7,44 @@ import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.Get;
 import org.restlet.resource.ResourceException;
 import org.restlet.resource.ServerResource;
-import smartparking.SingleConnectionSource;
-import smartparking.dao.impl.ParkingLotDaoImpl;
+import smartparking.Settings;
+import smartparking.dao.ParkingLotDao;
 import smartparking.resources.parkingLots.NearbyParkingLotsResource;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
 public class NearbyParkingLotsServerResource extends ServerResource implements NearbyParkingLotsResource {
-    String latitudeAttribute, longitudeAttribute, radiusAttribute;
-    int radius;
-    ParkingLotDaoImpl parkingLotDao;
+    private ParkingLotDao parkingLotDao;
 
-    public NearbyParkingLotsServerResource() {
-        try {
-            parkingLotDao = new ParkingLotDaoImpl(SingleConnectionSource.getConnectionSource());
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+    private String latitude, longitude, radius;
 
     @Override
     protected void doInit() throws ResourceException {
         super.doInit();
-        latitudeAttribute = getAttribute("latitude");
-        longitudeAttribute = getAttribute("longitude");
-        radiusAttribute = getAttribute("radius");
-        //setStatus(Status.CLIENT_ERROR_BAD_REQUEST, "请求错误");
+
+        parkingLotDao = Settings.getParkingLotDao();
+
+        latitude = getAttribute("latitude");
+        longitude = getAttribute("longitude");
+        radius = getAttribute("radius");
     }
 
     @Get
     public Representation getNearParkingLots() {
-        if (!checkAttributes(latitudeAttribute, longitudeAttribute, radiusAttribute))
+        if (!checkAttributes(latitude, longitude, radius))
             return new StringRepresentation("参数类型有误");
-        GenericRawResults parkingLots = parkingLotDao.getNearParkingLots(Double.parseDouble(latitudeAttribute), Double.parseDouble(longitudeAttribute), Integer.parseInt(radiusAttribute));
+
         List results = null;
+
         try {
+            GenericRawResults parkingLots = parkingLotDao.getNearParkingLots(Double.parseDouble(latitude), Double.parseDouble(longitude), Integer.parseInt(radius));
             results = parkingLots.getResults();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             System.out.println(e.getMessage());
         }
+
         return results != null && results.size() >= 1 ? new JacksonRepresentation<>(results) : new StringRepresentation("附近没有停车场");
     }
 
