@@ -3,7 +3,7 @@ package smartparking.model;
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-import smartparking.dao.UserDaoImpl;
+import smartparking.dao.impl.UserDaoImpl;
 
 import java.util.Date;
 
@@ -19,28 +19,28 @@ public class User {
     @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES, columnName = "pswd")
     private String password;
     //identity number
-    @DatabaseField(canBeNull = true, unique = true, index = true)
+    @DatabaseField(unique = true, index = true)
     private String idNo;
     //car's plate
-    @DatabaseField(canBeNull = true, dataType = DataType.STRING_BYTES)
+    @DatabaseField(dataType = DataType.STRING_BYTES)
     private String plateNumber;
     //gender
-    @DatabaseField(canBeNull = true)
+    @DatabaseField
     private Boolean gender;
     //register date,specified by Database!
-    @DatabaseField(canBeNull = true, dataType = DataType.DATE_STRING)
+    @DatabaseField(dataType = DataType.DATE_STRING)
     private Date regDate;
     //e mail address
-    @DatabaseField(canBeNull = true, index = true)
+    @DatabaseField(index = true)
     private String email;
     //telephone number
-    @DatabaseField(canBeNull = true, index = true)
+    @DatabaseField(index = true)
     private String phone;
     //activation code,1:telephone;2:email ;whether activated,>0:activated
-    @DatabaseField(canBeNull = true)
+    @DatabaseField
     private int howActivate;
     //VIP Database specify it=0 by default
-    @DatabaseField(canBeNull = true)
+    @DatabaseField
     private int IPLevel;
 
     public User() {
@@ -154,5 +154,21 @@ public class User {
                 ", howActivate=" + howActivate +
                 ", IPLevel=" + IPLevel +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        return id == user.id;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
     }
 }

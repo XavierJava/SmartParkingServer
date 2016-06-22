@@ -1,22 +1,20 @@
-package smartparking.dao;
+package smartparking.API;
 
 import smartparking.model.Order;
 
 import java.util.List;
 
-/**
- * Created by chenhuanhuan on 16-5-20.
- */
-public interface OrderDao {
+public interface OrderApi {
     List<Order> getOrders();
 
     Order getOrderById(int OrderId);
 
-    List getOrderByUserIdAndParkingLotId(int userId, int parkingLotId);
-
     List<Order> getOrdersByUserId(int userId);
 
     List getOrdersByParkingLotId(int parkingLotId);
+
+    List getOrderByUserIdAndParkingLotId(int userId, int parkingLotId);
+
 
     int addOrder(Order order);
 

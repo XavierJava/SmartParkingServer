@@ -1,4 +1,12 @@
 # README
+src/smartparking/API/m下的类供客户端调用
+src/smartparking/common下是服务器配置类
+src/smartparking/dao下是操作数据库的类
+src/smartparking/model下是模型类
+src/smartparking/resource/common/m下是客户端使用的服务器资源接口
+src/smartparking/resource/m下是供客户端使用的服务器资源
+
+其他文件是浏览器访问所需的类
 
 ## 项目名称
 

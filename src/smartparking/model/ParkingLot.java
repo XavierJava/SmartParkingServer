@@ -3,7 +3,7 @@ package smartparking.model;
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-import smartparking.dao.ParkingLotDaoImpl;
+import smartparking.dao.impl.ParkingLotDaoImpl;
 
 @DatabaseTable(tableName = "t_parkingLots", daoClass = ParkingLotDaoImpl.class)
 public class ParkingLot {
@@ -31,16 +31,26 @@ public class ParkingLot {
     @DatabaseField(canBeNull = false)
     private double hourlyPrice;
     //营业时间从hh:mm到h2h2:m2m2
-    @DatabaseField(canBeNull = true, dataType = DataType.STRING_BYTES)
+    @DatabaseField(dataType = DataType.STRING_BYTES)
     private String openingHours;
     //相关说明或者通知
-    @DatabaseField(canBeNull = true, dataType = DataType.STRING_BYTES)
+    @DatabaseField(dataType = DataType.STRING_BYTES)
     private String notice;
     //保存与用户的距离，不持久化
     @DatabaseField(persisted = false)
     private double distance;
 
     public ParkingLot() {
+    }
+
+    public ParkingLot(String name, String address, double latitude, double longitude, int totalSpaces, int availableSpaces, double hourlyPrice) {
+        this.name = name;
+        this.address = address;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.totalSpaces = totalSpaces;
+        this.availableSpaces = availableSpaces;
+        this.hourlyPrice = hourlyPrice;
     }
 
     public ParkingLot(int id, String name, String address, double longitude, double latitude, int totalSpaces, int availableSpaces, double hourlyPrice, String openingHours, String notice, double distance) {
@@ -160,5 +170,21 @@ public class ParkingLot {
                 ", notice='" + notice + '\'' +
                 ", distance=" + distance +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ParkingLot that = (ParkingLot) o;
+
+        return id == that.id;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
     }
 }
