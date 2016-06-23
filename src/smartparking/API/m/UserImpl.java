@@ -12,16 +12,10 @@ import smartparking.resources.common.m.UsersResource;
 import java.util.List;
 
 public class UserImpl implements UserApi {
-    private Client client = new Client(new Context(), Protocol.HTTP);
     private ClientResource service = new ClientResource("http://localhost:8111");
 
-
-    /* OrderResource orderResource = service.getChild("/orders/0", OrderResource.class);
-
-
-*/
     public UserImpl() {
-        service.setNext(client);
+        service.setNext(new Client(new Context(), Protocol.HTTP));
     }
 
     @Override
@@ -33,13 +27,13 @@ public class UserImpl implements UserApi {
 
     @Override
     public User getUserById(int userId) {
-        UserResource userResource = service.getChild("/users/" + userId + "?q=id", UserResource.class);
+        UserResource userResource = service.getChild("/user/" + userId + "?q=id", UserResource.class);
         return userResource.getUser();
     }
 
     @Override
     public User getUserByName(String name) {
-        UserResource userResource = service.getChild("/users/" + name + "?q=name", UserResource.class);
+        UserResource userResource = service.getChild("/user/" + name + "?q=name", UserResource.class);
         return userResource.getUser();
     }
 
@@ -59,7 +53,7 @@ public class UserImpl implements UserApi {
 
     @Override
     public int removeUserById(int userId) {
-        UserResource userResource = service.getChild("/users/" + userId, UserResource.class);
+        UserResource userResource = service.getChild("/user/" + userId, UserResource.class);
         return userResource.removeUser();
 
     }

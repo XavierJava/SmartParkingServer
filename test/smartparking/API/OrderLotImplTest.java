@@ -9,9 +9,9 @@ import smartparking.model.User;
 
 public class OrderLotImplTest {
     private OrderImpl orderImpl = new OrderImpl();
-    Order order = new Order();
-    User user = new User();
-    ParkingLot parkingLot = new ParkingLot();
+    private Order order = new Order();
+    private User user = new User();
+    private ParkingLot parkingLot = new ParkingLot();
 
     @Before
     public void setUp() {
@@ -39,7 +39,7 @@ public class OrderLotImplTest {
 
     @Test
     public void testGetOrdersByUserId() {
-        assert orderImpl.getOrdersByUserId(2).size() > 0;
+        assert orderImpl.getOrdersByUserId(5).size() == 0;
     }
 
     @Test
@@ -61,6 +61,6 @@ public class OrderLotImplTest {
 
     @Test
     public void testRemoveOrder() {
-        assert orderImpl.removeOrderById(3) > 0;
+        assert orderImpl.removeOrderById(4) > 0;
     }
 }

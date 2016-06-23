@@ -12,11 +12,9 @@ import smartparking.dao.impl.UserDaoImpl;
 import java.sql.SQLException;
 
 public class Settings {
-    public static final String SERVER_HOST = "http://localhost:8111";
     private static final String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
     private static final String username = "root";
     private static final String password = "chenhuan";
-    private static ConnectionSource connectionSource;
 
     private static ParkingLotDao parkingLotDao;
     private static UserDao userDao;
@@ -24,18 +22,13 @@ public class Settings {
 
     static {
         try {
-            connectionSource = new JdbcConnectionSource(databaseUrl, username, password);
-
+            ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, username, password);
             parkingLotDao = new ParkingLotDaoImpl(connectionSource);
             userDao = new UserDaoImpl(connectionSource);
             orderDao = new OrderDaoImpl(connectionSource);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    public static ConnectionSource getConnectionSource() {
-        return connectionSource;
     }
 
     public static ParkingLotDao getParkingLotDao() {

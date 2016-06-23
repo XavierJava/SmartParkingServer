@@ -9,23 +9,18 @@ import java.util.Date;
 
 @DatabaseTable(tableName = "t_orders", daoClass = OrderDaoImpl.class)
 public class Order {
-    //order's id
     @DatabaseField(generatedId = true)
     private int id;
 
-    //parking lot's id
     @DatabaseField(canBeNull = false, foreign = true, columnName = "id_lot")
     private ParkingLot parkingLot;
 
-    //user's id
     @DatabaseField(canBeNull = false, foreign = true, columnName = "id_user")
     private User user;
 
-    //when it be generated,specified by constructor!
     @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING, format = "yyyy-MM-dd HH:mm:ss")
     private Date date;
 
-    //amount of the order
     @DatabaseField(canBeNull = false)
     private double amount;
 

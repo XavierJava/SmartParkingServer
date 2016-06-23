@@ -18,15 +18,15 @@ public class SmartParkingServer extends Application {
         setAuthor("BJUT Smart Parking Team");
     }
 
-    public static void startServer() throws Exception {
+    public static void main(String[] args) throws Exception {
+        startServer();
+    }
+
+    private static void startServer() throws Exception {
         Component SmartParkingServer = new Component();
         SmartParkingServer.getServers().add(Protocol.HTTP, "0.0.0.0", 8111);
         SmartParkingServer.getDefaultHost().attach(new SmartParkingServer());
         SmartParkingServer.start();
-    }
-
-    public static void main(String[] args) throws Exception {
-        startServer();
     }
 
     @Override

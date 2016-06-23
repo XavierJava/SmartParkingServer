@@ -9,7 +9,6 @@ import smartparking.dao.OrderDao;
 import smartparking.model.Order;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDao {
@@ -19,7 +18,7 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
 
     @Override
     public List<Order> getOrders() {
-        List list = new ArrayList();
+        List<Order> list = null;
 
         try {
             list = queryForAll();
@@ -41,16 +40,17 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
     }
 
     @Override
-    public List getOrderByUserIdAndParkingLotId(int userId, int parkingLotId) {
+    public List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId) {
         List<Order> orderList = null;
         QueryBuilder<Order, Integer> queryBuilder = this.queryBuilder();
         Where<Order, Integer> where = queryBuilder.where();
 
         try {
             where.and(where.eq("id_user", userId), where.eq("id_lot", parkingLotId));
-            PreparedQuery preparedQuery = queryBuilder.prepare();
+            PreparedQuery<Order> preparedQuery = queryBuilder.prepare();
             orderList = this.query(preparedQuery);
         } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
         return orderList;
 
@@ -58,7 +58,7 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
 
     @Override
     public List<Order> getOrdersByUserId(int userId) {
-        List list = null;
+        List<Order> list = null;
         try {
             list = queryForEq("id_user", userId);
         } catch (SQLException e) {
@@ -68,8 +68,8 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
     }
 
     @Override
-    public List getOrdersByParkingLotId(int parkingLotId) {
-        List list = null;
+    public List<Order> getOrdersByParkingLotId(int parkingLotId) {
+        List<Order> list = null;
         try {
             list = queryForEq("id_lot", parkingLotId);
         } catch (SQLException e) {

@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface UsersResource {
     @Get
-    List getUsers();
+    List<User> getUsers();
 
     @Put
     int updateUser(User user);

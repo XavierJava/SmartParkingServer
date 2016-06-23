@@ -11,9 +11,9 @@ public interface ParkingLotApi {
 
     ParkingLot getParkingLotByName(String name);
 
-    List getParkingLots();
+    List<ParkingLot> getParkingLots();
 
-    List getNearParkingLots(double longitude, double altitude, int radius) throws IOException, SQLException;
+    List<ParkingLot> getNearParkingLots(double longitude, double altitude, int radius) throws IOException, SQLException;
 
     int addParkingLot(ParkingLot parkLot);
 

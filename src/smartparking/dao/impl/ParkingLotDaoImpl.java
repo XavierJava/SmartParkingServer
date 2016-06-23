@@ -9,7 +9,6 @@ import smartparking.model.ParkingLot;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> implements ParkingLotDao {
@@ -18,8 +17,8 @@ public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> implemen
     }
 
     @Override
-    public java.util.List getParkingLots() {
-        java.util.List list = new ArrayList<ParkingLot>();
+    public List<ParkingLot> getParkingLots() {
+        List<ParkingLot> list = null;
         try {
             list = queryForAll();
         } catch (SQLException e) {
@@ -54,8 +53,8 @@ public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> implemen
     }
 
     @Override
-    public java.util.List getNearParkingLots(double MyLatitude, double MyLongitude, int distance) {//乱码
-        java.util.List results = null;
+    public List<ParkingLot> getNearParkingLots(double MyLatitude, double MyLongitude, int distance) {//乱码
+        List<ParkingLot> results = null;
         try {
             String sql = "SELECT pklt.*,6371 * 2 * ASIN(SQRT(POWER(SIN((" +
                     MyLatitude + "-latitude) *pi()/180 / 2), 2) +COS(" + MyLatitude +
@@ -98,7 +97,7 @@ public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> implemen
     }
 
     @Override
-    public int editParkingLot(ParkingLot parkingLot) {
+    public int updateParkingLot(ParkingLot parkingLot) {
         int flag = 0;
         try {
             flag = update(parkingLot);

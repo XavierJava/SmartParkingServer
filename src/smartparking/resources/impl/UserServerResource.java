@@ -27,7 +27,7 @@ public class UserServerResource extends ServerResource implements UserResource {
         User user = Settings.getUserDao().getUserById(Integer.parseInt(userId));
 
         return user == null ? new StringRepresentation("不存在该用户", MediaType.TEXT_PLAIN) :
-                new JacksonRepresentation<User>(user);
+                new JacksonRepresentation<>(user);
     }
 
 

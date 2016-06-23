@@ -37,7 +37,7 @@ public class NearbyParkingLotsServerResource extends ServerResource implements N
         return results != null && results.size() >= 1 ? new JacksonRepresentation<>(results) : new StringRepresentation("附近没有停车场");
     }
 
-    public boolean checkAttributes(String latitude, String longitude, String radius) {
+    private boolean checkAttributes(String latitude, String longitude, String radius) {
         return latitude.matches("^(-?\\d+)(\\.\\d+)?$") && longitude.matches("^(-?\\d+)(\\.\\d+)?$") && radius.matches("^[0-9]*[1-9][0-9]*$");
     }
 }

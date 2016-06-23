@@ -11,9 +11,9 @@ public interface OrderApi {
 
     List<Order> getOrdersByUserId(int userId);
 
-    List getOrdersByParkingLotId(int parkingLotId);
+    List<Order> getOrdersByParkingLotId(int parkingLotId);
 
-    List getOrderByUserIdAndParkingLotId(int userId, int parkingLotId);
+    List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId);
 
 
     int addOrder(Order order);

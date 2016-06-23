@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class UsersServerResource extends ServerResource implements UsersResource {
-    UserDao userDao;
+    private UserDao userDao;
 
     @Override
     protected void doInit() {
@@ -33,19 +33,19 @@ public class UsersServerResource extends ServerResource implements UsersResource
 
     @Override
     public int updateUser(Representation rep) {
-        JacksonRepresentation<User> userRep = new JacksonRepresentation<User>(rep, User.class);
+        JacksonRepresentation<User> userRep = new JacksonRepresentation<>(rep, User.class);
         User user = null;
         try {
             user = userRep.getObject();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        return userDao.editUser(user);
+        return userDao.updateUser(user);
     }
 
     @Override
     public int addUser(Representation rep) {
-        JacksonRepresentation<User> userRep = new JacksonRepresentation<User>(rep, User.class);
+        JacksonRepresentation<User> userRep = new JacksonRepresentation<>(rep, User.class);
         User user = null;
         try {
             user = userRep.getObject();

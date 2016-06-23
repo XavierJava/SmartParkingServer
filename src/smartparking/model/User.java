@@ -7,39 +7,32 @@ import smartparking.dao.impl.UserDaoImpl;
 
 import java.util.Date;
 
+/**
+ * 用户类
+ */
+
 @DatabaseTable(tableName = "t_users", daoClass = UserDaoImpl.class)
 public class User {
-    //ID auto created
     @DatabaseField(generatedId = true)
     private int id;
-    //username unique in database;be careful with mess code.x
     @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
     private String name;
-    //user's password
     @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES, columnName = "pswd")
     private String password;
-    //identity number
     @DatabaseField(unique = true, index = true)
     private String idNo;
-    //car's plate
     @DatabaseField(dataType = DataType.STRING_BYTES)
     private String plateNumber;
-    //gender
     @DatabaseField
     private Boolean gender;
-    //register date,specified by Database!
     @DatabaseField(dataType = DataType.DATE_STRING)
     private Date regDate;
-    //e mail address
     @DatabaseField(index = true)
     private String email;
-    //telephone number
     @DatabaseField(index = true)
     private String phone;
-    //activation code,1:telephone;2:email ;whether activated,>0:activated
     @DatabaseField
     private int howActivate;
-    //VIP Database specify it=0 by default
     @DatabaseField
     private int IPLevel;
 

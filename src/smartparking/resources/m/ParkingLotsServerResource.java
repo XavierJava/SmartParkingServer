@@ -27,7 +27,7 @@ public class ParkingLotsServerResource extends ServerResource implements Parking
 
     @Override
     public int updateParkingLot(ParkingLot parkingLot) {
-        return parkingLotDao.editParkingLot(parkingLot);
+        return parkingLotDao.updateParkingLot(parkingLot);
     }
 
     @Override

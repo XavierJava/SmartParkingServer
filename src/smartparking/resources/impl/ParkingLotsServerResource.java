@@ -43,7 +43,7 @@ public class ParkingLotsServerResource extends ServerResource implements Parking
             System.out.println(e.getMessage());
         }
 
-        return parkingLotDao.editParkingLot(parkingLot) > 0 ? "修改成功" : "修改失败";
+        return parkingLotDao.updateParkingLot(parkingLot) > 0 ? "修改成功" : "修改失败";
     }
 
     @Override

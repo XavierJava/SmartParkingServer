@@ -12,8 +12,11 @@ import smartparking.resources.common.m.OrdersResource;
 import java.util.List;
 
 public class OrderImpl implements OrderApi {
-    private Client client = new Client(new Context(), Protocol.HTTP);
     private ClientResource service = new ClientResource("http://localhost:8111");
+
+    public OrderImpl() {
+        service.setNext(new Client(new Context(), Protocol.HTTP));
+    }
 
     @Override
     public List<Order> getOrders() {
@@ -30,7 +33,7 @@ public class OrderImpl implements OrderApi {
 
 
     @Override
-    public List getOrderByUserIdAndParkingLotId(int userId, int parkingLotId) {
+    public List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId) {
         OrdersResource ordersResource = service.getChild("/orders/" + userId + "/" + parkingLotId, OrdersResource.class);
 
         return ordersResource.getOrders();
@@ -44,7 +47,7 @@ public class OrderImpl implements OrderApi {
     }
 
     @Override
-    public List getOrdersByParkingLotId(int parkingLotId) {
+    public List<Order> getOrdersByParkingLotId(int parkingLotId) {
         OrdersResource ordersResource = service.getChild("/orders/" + parkingLotId + "?q=parkingLot", OrdersResource.class);
 
         return ordersResource.getOrders();

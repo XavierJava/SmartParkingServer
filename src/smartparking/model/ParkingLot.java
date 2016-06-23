@@ -7,36 +7,26 @@ import smartparking.dao.impl.ParkingLotDaoImpl;
 
 @DatabaseTable(tableName = "t_parkingLots", daoClass = ParkingLotDaoImpl.class)
 public class ParkingLot {
-    //停车场的编号
     @DatabaseField(generatedId = true)
     private int id;
-    //停车场的名字
     @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
     private String name;
-    //停车场的详细地址
     @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
     private String address;
-    //经纬度
     @DatabaseField(canBeNull = false)
     private double longitude;
     @DatabaseField(canBeNull = false)
     private double latitude;
-    //总停车位
     @DatabaseField(canBeNull = false)
     private int totalSpaces;
-    //可用停车位
     @DatabaseField(canBeNull = false)
     private int availableSpaces;
-    //单价
     @DatabaseField(canBeNull = false)
     private double hourlyPrice;
-    //营业时间从hh:mm到h2h2:m2m2
     @DatabaseField(dataType = DataType.STRING_BYTES)
     private String openingHours;
-    //相关说明或者通知
     @DatabaseField(dataType = DataType.STRING_BYTES)
     private String notice;
-    //保存与用户的距离，不持久化
     @DatabaseField(persisted = false)
     private double distance;
 

@@ -32,6 +32,6 @@ public class UsersServerResource extends ServerResource implements UsersResource
     @Override
     public int updateUser(User user) {
 
-        return userDao.editUser(user);
+        return userDao.updateUser(user);
     }
 }

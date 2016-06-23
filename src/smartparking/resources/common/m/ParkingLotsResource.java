@@ -5,10 +5,12 @@ import org.restlet.resource.Post;
 import org.restlet.resource.Put;
 import smartparking.model.ParkingLot;
 
+import java.util.List;
+
 
 public interface ParkingLotsResource {
     @Get
-    java.util.List getParkingLots();
+    List<ParkingLot> getParkingLots();
 
     @Put
     int updateParkingLot(ParkingLot parkingLot);

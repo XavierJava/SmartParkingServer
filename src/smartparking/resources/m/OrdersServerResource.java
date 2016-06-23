@@ -26,7 +26,7 @@ public class OrdersServerResource extends ServerResource implements OrdersResour
     }
 
     @Override
-    public List getOrders() {
+    public List<Order> getOrders() {
         if (userIdOrParkingLotId == null)
             return orderDao.getOrders();
         if (q.equals("user"))

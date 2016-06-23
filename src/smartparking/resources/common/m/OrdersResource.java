@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface OrdersResource {
     @Get
-    List getOrders();
+    List<Order> getOrders();
 
     @Post
     int addOrder(Order order);

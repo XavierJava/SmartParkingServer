@@ -6,7 +6,6 @@ import smartparking.dao.UserDao;
 import smartparking.model.User;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
@@ -15,8 +14,8 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
     }
 
     @Override
-    public List getUsers() {
-        List list = new ArrayList<User>();
+    public List<User> getUsers() {
+        List<User> list = null;
         try {
             list = queryForAll();
         } catch (SQLException e) {
@@ -59,7 +58,7 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
     }
 
     @Override
-    public int editUser(User user) {
+    public int updateUser(User user) {
         int flag = 0;
         try {
             flag = update(user);

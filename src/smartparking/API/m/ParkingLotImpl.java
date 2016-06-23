@@ -13,8 +13,11 @@ import smartparking.resources.common.m.ParkingLotsResource;
 import java.util.List;
 
 public class ParkingLotImpl implements ParkingLotApi {
-    private Client client = new Client(new Context(), Protocol.HTTP);
     private ClientResource service = new ClientResource("http://localhost:8111");
+
+    public ParkingLotImpl() {
+        service.setNext(new Client(new Context(), Protocol.HTTP));
+    }
 
     @Override
     public ParkingLot getParkingLotById(int id) {
@@ -29,13 +32,13 @@ public class ParkingLotImpl implements ParkingLotApi {
     }
 
     @Override
-    public List getParkingLots() {
+    public List<ParkingLot> getParkingLots() {
         ParkingLotsResource parkingLotsResource = service.getChild("/parking_lots", ParkingLotsResource.class);
         return parkingLotsResource.getParkingLots();
     }
 
     @Override
-    public List getNearParkingLots(double latitude, double longitude, int radius) {
+    public List<ParkingLot> getNearParkingLots(double latitude, double longitude, int radius) {
         NearbyParkingLotsResource nearbyParkingLotsServerResource = service.getChild("/nearby_parking_lots/" + latitude + "/" + longitude + "/" + radius, NearbyParkingLotsResource.class);
         return nearbyParkingLotsServerResource.getNearbyParkingLots();
     }
