@@ -74,5 +74,7 @@ https://github.com/mcai/SmartParkingServer.git
 
 * 增加分页和排序功能
 
+* 在写每个测试时，应确保测试的完整性和可重复性，即不要假设在测试之前数据库中已存在某些数据，而应该在做测试之前(如@Before setUp()方法体内)准备好数据
+
 
 
