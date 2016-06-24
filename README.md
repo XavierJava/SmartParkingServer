@@ -26,7 +26,7 @@ src/smartparking/model/ - 模型层
 src/smartparking/resources/ - REST服务器资源层
 src/smartparking/SmartParkingServer/ - SmartParking服务器
 
-test/smartparking/api - REST API层测试
+test/smartparking/api/ - REST API层测试
 
 ## 主要技术
 
