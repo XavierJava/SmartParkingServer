@@ -1,14 +1,14 @@
-package smartparking.API;
+package smartparking.rest;
 
 import org.junit.Before;
 import org.junit.Test;
-import smartparking.API.m.OrderImpl;
 import smartparking.model.Order;
 import smartparking.model.ParkingLot;
 import smartparking.model.User;
+import smartparking.rest.impl.OrderApiImpl;
 
-public class OrderLotImplTest {
-    private OrderImpl orderImpl = new OrderImpl();
+public class OrderApiTest {
+    private OrderApi orderApi = new OrderApiImpl();
     private Order order = new Order();
     private User user = new User();
     private ParkingLot parkingLot = new ParkingLot();
@@ -24,43 +24,43 @@ public class OrderLotImplTest {
 
     @Test
     public void testAddOrder() {
-        assert orderImpl.addOrder(order) > 0;
+        assert orderApi.addOrder(order) > 0;
     }
 
     @Test
     public void testGetOrders() {
-        assert orderImpl.getOrders().size() > 0;
+        assert orderApi.getOrders().size() > 0;
     }
 
     @Test
     public void testGetOrderById() {
-        assert orderImpl.getOrderById(6) != null;
+        assert orderApi.getOrderById(6) != null;
     }
 
     @Test
     public void testGetOrdersByUserId() {
-        assert orderImpl.getOrdersByUserId(5).size() == 0;
+        assert orderApi.getOrdersByUserId(5).size() == 0;
     }
 
     @Test
     public void testGetOrdersByParkingLotId() {
-        assert orderImpl.getOrdersByParkingLotId(1).size() > 0;
+        assert orderApi.getOrdersByParkingLotId(1).size() > 0;
     }
 
     @Test
     public void testOrderByUserIdAndParkingLotId() {
-        assert orderImpl.getOrderByUserIdAndParkingLotId(2, 1).size() > 0;
+        assert orderApi.getOrderByUserIdAndParkingLotId(2, 1).size() > 0;
     }
 
     @Test
     public void testUpdateOrder() {
         order.setId(8);
         order.setPaid(true);
-        assert orderImpl.updateOrder(order) > 0;
+        assert orderApi.updateOrder(order) > 0;
     }
 
     @Test
     public void testRemoveOrder() {
-        assert orderImpl.removeOrderById(4) > 0;
+        assert orderApi.removeOrderById(4) > 0;
     }
 }

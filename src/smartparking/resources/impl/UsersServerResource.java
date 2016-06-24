@@ -1,20 +1,15 @@
 package smartparking.resources.impl;
 
-import org.restlet.data.MediaType;
-import org.restlet.ext.jackson.JacksonRepresentation;
-import org.restlet.representation.Representation;
-import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.ServerResource;
 import smartparking.common.Settings;
 import smartparking.dao.UserDao;
 import smartparking.model.User;
-import smartparking.resources.common.UsersResource;
+import smartparking.resources.UsersResource;
 
-import java.io.IOException;
 import java.util.List;
 
 public class UsersServerResource extends ServerResource implements UsersResource {
-    private UserDao userDao;
+    UserDao userDao;
 
     @Override
     protected void doInit() {
@@ -24,35 +19,19 @@ public class UsersServerResource extends ServerResource implements UsersResource
 
 
     @Override
-    public Representation getUsers() {
-        List users;
-        users = userDao.getUsers();
-        return users == null ? new StringRepresentation("不存在用户", MediaType.TEXT_PLAIN) :
-                new JacksonRepresentation<>(users);
+    public List getUsers() {
+        return userDao.getUsers();
     }
 
-    @Override
-    public int updateUser(Representation rep) {
-        JacksonRepresentation<User> userRep = new JacksonRepresentation<>(rep, User.class);
-        User user = null;
-        try {
-            user = userRep.getObject();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        return userDao.updateUser(user);
-    }
 
     @Override
-    public int addUser(Representation rep) {
-        JacksonRepresentation<User> userRep = new JacksonRepresentation<>(rep, User.class);
-        User user = null;
-        try {
-            user = userRep.getObject();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+    public int addUser(User user) {
         return userDao.addUser(user);
     }
 
+    @Override
+    public int updateUser(User user) {
+
+        return userDao.updateUser(user);
+    }
 }

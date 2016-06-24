@@ -1,4 +1,4 @@
-package smartparking.resources.common.m;
+package smartparking.resources;
 
 import org.restlet.resource.Get;
 import smartparking.model.ParkingLot;

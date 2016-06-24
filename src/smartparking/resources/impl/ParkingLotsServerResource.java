@@ -1,16 +1,11 @@
 package smartparking.resources.impl;
 
-import org.restlet.ext.jackson.JacksonRepresentation;
-import org.restlet.representation.Representation;
-import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.ResourceException;
 import org.restlet.resource.ServerResource;
 import smartparking.common.Settings;
 import smartparking.dao.ParkingLotDao;
 import smartparking.model.ParkingLot;
-import smartparking.resources.common.ParkingLotsResource;
-
-import java.io.IOException;
+import smartparking.resources.ParkingLotsResource;
 
 public class ParkingLotsServerResource extends ServerResource implements ParkingLotsResource {
     private ParkingLotDao parkingLotDao;
@@ -22,44 +17,22 @@ public class ParkingLotsServerResource extends ServerResource implements Parking
         parkingLotDao = Settings.getParkingLotDao();
     }
 
-    @Override
-    public Representation getParkingLots() {
-        java.util.List parkingLots = parkingLotDao.getParkingLots();
 
-        return parkingLots != null ? new JacksonRepresentation<>(parkingLots) : new StringRepresentation("没有停车场");
+    @Override
+    public java.util.List getParkingLots() {
+
+        return parkingLotDao.getParkingLots();
     }
 
 
     @Override
-    public String updateParkingLot(Representation rep) {
-        JacksonRepresentation<ParkingLot> parkingLotRep = new JacksonRepresentation<>(
-                rep, ParkingLot.class);
-
-        ParkingLot parkingLot = null;
-
-        try {
-            parkingLot = parkingLotRep.getObject();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-        return parkingLotDao.updateParkingLot(parkingLot) > 0 ? "修改成功" : "修改失败";
+    public int updateParkingLot(ParkingLot parkingLot) {
+        return parkingLotDao.updateParkingLot(parkingLot);
     }
 
     @Override
-    public String addParkingLot(Representation rep) {
-        JacksonRepresentation<ParkingLot> parkingLotRep = new JacksonRepresentation<>(
-                rep, ParkingLot.class);
+    public int addParkingLot(ParkingLot parkingLot) {
 
-        ParkingLot parkingLot = null;
-
-        try {
-            parkingLot = parkingLotRep.getObject();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-        return parkingLotDao.addParkingLot(parkingLot) > 0 ? "新增成功" : "新增失败";
+        return parkingLotDao.addParkingLot(parkingLot);
     }
-
 }

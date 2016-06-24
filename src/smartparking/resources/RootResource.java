@@ -22,7 +22,7 @@
  * Restlet is a registered trademark of Restlet S.A.S.
  */
 
-package smartparking.resources.common;
+package smartparking.resources;
 
 import org.restlet.resource.Get;
 

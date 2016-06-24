@@ -5,8 +5,7 @@ import org.restlet.Component;
 import org.restlet.Restlet;
 import org.restlet.data.Protocol;
 import org.restlet.routing.Router;
-import smartparking.resources.impl.RootServerResource;
-import smartparking.resources.m.*;
+import smartparking.resources.impl.*;
 
 import java.sql.SQLException;
 
@@ -43,12 +42,12 @@ public class SmartParkingServer extends Application {
 
         router.attach("/parking_lots", ParkingLotsServerResource.class);
 
-        router.attach("/nearby_parking_lots/{latitude}/{longitude}/{radius}",
-                NearbyParkingLotsServerResource.class);
+        router.attach("/nearby_parking_lots/{latitude}/{longitude}/{radius}", NearbyParkingLotsServerResource.class);
 
         router.attach("/order/{orderId}", OrderServerResource.class);
 
         router.attach("/orders/{userIdOrParkingLotId}", OrdersServerResource.class);
+
         router.attach("/orders/{userId}/{parkingLotId}", OrdersServerResource.class);
 
         router.attach("/orders", OrdersServerResource.class);

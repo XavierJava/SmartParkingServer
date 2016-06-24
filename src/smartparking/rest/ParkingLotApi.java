@@ -1,9 +1,7 @@
-package smartparking.API;
+package smartparking.rest;
 
 import smartparking.model.ParkingLot;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 public interface ParkingLotApi {
@@ -13,7 +11,7 @@ public interface ParkingLotApi {
 
     List<ParkingLot> getParkingLots();
 
-    List<ParkingLot> getNearParkingLots(double longitude, double altitude, int radius) throws IOException, SQLException;
+    List<ParkingLot> getNearParkingLots(double longitude, double altitude, int radius);
 
     int addParkingLot(ParkingLot parkLot);
 

@@ -1,14 +1,14 @@
-package smartparking.API;
+package smartparking.rest;
 
 import org.junit.Before;
 import org.junit.Test;
-import smartparking.API.m.UserImpl;
 import smartparking.model.User;
+import smartparking.rest.impl.UserApiImpl;
 
 import java.io.IOException;
 
-public class UserApiUserImplTest {
-    private UserImpl clientImpl = new UserImpl();
+public class UserApiTest {
+    private UserApi userApi = new UserApiImpl();
     private User user = new User();
 
     @Before
@@ -19,35 +19,35 @@ public class UserApiUserImplTest {
 
     @Test
     public void testGetUsers() {
-        assert clientImpl.getUsers().size() > 6;
+        assert userApi.getUsers().size() > 6;
     }
 
     @Test
     public void testAddUser() {
-        assert clientImpl.addUser(user) > 0;
+        assert userApi.addUser(user) > 0;
     }
 
     @Test
     public void testGetUserById() throws IOException {
-        User user = clientImpl.getUserById(3);
+        User user = userApi.getUserById(3);
         assert user != null;
     }
 
     @Test
     public void testGetUserByName() {
-        User user = clientImpl.getUserByName("huanhuan1");
+        User user = userApi.getUserByName("huanhuan1");
         assert user != null;
     }
 
     @Test
     public void testUpdateUser() throws IOException {
-        User user = clientImpl.getUserById(3);
+        User user = userApi.getUserById(3);
         user.setName("nan");
-        assert clientImpl.updateUser(user) > 0;
+        assert userApi.updateUser(user) > 0;
     }
 
     @Test
     public void testRemoveUserById() throws IOException {
-        assert clientImpl.removeUserById(9) > 0;
+        assert userApi.removeUserById(9) > 0;
     }
 }

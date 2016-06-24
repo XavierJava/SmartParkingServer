@@ -1,13 +1,10 @@
 package smartparking.resources.impl;
 
-import org.restlet.ext.jackson.JacksonRepresentation;
-import org.restlet.representation.Representation;
-import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.ServerResource;
 import smartparking.common.Settings;
 import smartparking.dao.OrderDao;
 import smartparking.model.Order;
-import smartparking.resources.common.OrderResource;
+import smartparking.resources.OrderResource;
 
 public class OrderServerResource extends ServerResource implements OrderResource {
     private OrderDao orderDao;
@@ -27,22 +24,16 @@ public class OrderServerResource extends ServerResource implements OrderResource
 
 
     @Override
-    public Representation getOrder() {
-        if (orderId == null || !orderId.matches("^[0-9]*[1-9][0-9]*$"))
-            return new StringRepresentation("参数类型错误");
+    public Order getOrder() {
 
         Order order = orderDao.getOrderById(Integer.parseInt(orderId));
 
-        return order != null ? new JacksonRepresentation<>(order) : new StringRepresentation("没有该订单");
+        return order;
     }
 
 
     @Override
-    public String removeOrder() {
-        if (orderId == null || !orderId.matches("^[0-9]*[1-9][0-9]*$"))
-            return "参数类型错误";
-
-        return orderDao.removeOrderById(Integer.parseInt(orderId)) > 0 ? "删除成功" : "删除失败";
+    public int removeOrder() {
+        return orderDao.removeOrderById(Integer.parseInt(orderId));
     }
-
 }

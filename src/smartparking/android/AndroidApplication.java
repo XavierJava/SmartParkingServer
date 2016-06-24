@@ -1,14 +1,14 @@
 package smartparking.android;
 
-import smartparking.API.UserApi;
-import smartparking.API.m.UserImpl;
 import smartparking.model.User;
+import smartparking.rest.UserApi;
+import smartparking.rest.impl.UserApiImpl;
 
 public class AndroidApplication {
-    private UserApi client;
+    private UserApi userApi;
 
     public AndroidApplication() {
-        client = new UserImpl();
+        userApi = new UserApiImpl();
     }
 
     public void onButtonAddUserClick() {
@@ -19,6 +19,6 @@ public class AndroidApplication {
         user.setName(name);
         user.setPassword(password);
 
-        client.addUser(user);
+        userApi.addUser(user);
     }
 }

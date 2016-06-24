@@ -1,21 +1,21 @@
-package smartparking.API.m;
+package smartparking.rest.impl;
 
 import org.restlet.Client;
 import org.restlet.Context;
 import org.restlet.data.Protocol;
 import org.restlet.resource.ClientResource;
-import smartparking.API.ParkingLotApi;
 import smartparking.model.ParkingLot;
-import smartparking.resources.common.m.NearbyParkingLotsResource;
-import smartparking.resources.common.m.ParkingLotResource;
-import smartparking.resources.common.m.ParkingLotsResource;
+import smartparking.resources.NearbyParkingLotsResource;
+import smartparking.resources.ParkingLotResource;
+import smartparking.resources.ParkingLotsResource;
+import smartparking.rest.ParkingLotApi;
 
 import java.util.List;
 
-public class ParkingLotImpl implements ParkingLotApi {
+public class ParkingLotApiImpl implements ParkingLotApi {
     private ClientResource service = new ClientResource("http://localhost:8111");
 
-    public ParkingLotImpl() {
+    public ParkingLotApiImpl() {
         service.setNext(new Client(new Context(), Protocol.HTTP));
     }
 

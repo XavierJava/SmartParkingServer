@@ -1,63 +1,52 @@
 package smartparking.resources.impl;
 
-import org.restlet.ext.jackson.JacksonRepresentation;
-import org.restlet.representation.Representation;
 import org.restlet.resource.ServerResource;
 import smartparking.common.Settings;
 import smartparking.dao.OrderDao;
 import smartparking.model.Order;
-import smartparking.resources.common.OrdersResource;
+import smartparking.resources.OrdersResource;
 
-import java.io.IOException;
 import java.util.List;
 
 public class OrdersServerResource extends ServerResource implements OrdersResource {
     private OrderDao orderDao;
+    private String userIdOrParkingLotId;
+    private String q;
+    private String userId;
+    private String parkingLotId;
 
     @Override
     public void doInit() {
         super.doInit();
-
+        userIdOrParkingLotId = getAttribute("userIdOrParkingLotId");
+        q = getQueryValue("q");
+        userId = getAttribute("userId");
+        parkingLotId = getAttribute("parkingLotId");
         orderDao = Settings.getOrderDao();
     }
 
-
     @Override
-    public Representation getOrders() {
-        List orders = orderDao.getOrders();
-
-        return new JacksonRepresentation<>(orders);
+    public List<Order> getOrders() {
+        if (userIdOrParkingLotId == null)
+            return orderDao.getOrders();
+        if (q.equals("user"))
+            return orderDao.getOrdersByUserId(Integer.parseInt(userIdOrParkingLotId));
+        if (q.equals("parkingLot"))
+            return orderDao.getOrdersByParkingLotId(Integer.parseInt(userIdOrParkingLotId));
+        if (userId != null && parkingLotId != null)
+            return orderDao.getOrderByUserIdAndParkingLotId(Integer.parseInt(userId), Integer.parseInt(parkingLotId));
+        else
+            return null;
     }
 
     @Override
-    public String addOrder(Representation rep) {
-        JacksonRepresentation<Order> orderRep = new JacksonRepresentation<>(
-                rep, Order.class);
-
-        Order order = null;
-
-        try {
-            order = orderRep.getObject();
-        } catch (IOException E) {
-            System.out.println(E.getMessage());
-        }
-
-        return orderDao.addOrder(order) > 0 ? "新增成功" : "新增失败";
+    public int addOrder(Order order) {
+        return orderDao.addOrder(order);
     }
 
     @Override
-    public String updateOrder(Representation rep) {
-        JacksonRepresentation<Order> orderRep = new JacksonRepresentation<>(
-                rep, Order.class);
+    public int updateOrder(Order order) {
 
-        Order order = null;
-
-        try {
-            order = orderRep.getObject();
-        } catch (IOException E) {
-            System.out.println(E.getMessage());
-        }
-
-        return orderDao.updateOrder(order) > 0 ? "修改成功" : "修改失败";
+        return orderDao.updateOrder(order);
     }
 }

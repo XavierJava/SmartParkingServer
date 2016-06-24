@@ -1,4 +1,4 @@
-package smartparking.API;
+package smartparking.rest;
 
 import smartparking.model.Order;
 
@@ -14,7 +14,6 @@ public interface OrderApi {
     List<Order> getOrdersByParkingLotId(int parkingLotId);
 
     List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId);
-
 
     int addOrder(Order order);
 

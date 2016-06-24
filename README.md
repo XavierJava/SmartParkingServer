@@ -68,5 +68,11 @@ http://www.restlet.com/
 
 https://github.com/mcai/SmartParkingServer.git
 
+## TODOs
+
+* 所有核心代码和测试代码增加中文注释
+
+* 增加分页和排序功能
+
 
 

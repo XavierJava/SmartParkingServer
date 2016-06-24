@@ -1,11 +1,10 @@
-package smartparking.API;
+package smartparking.rest;
 
 import smartparking.model.User;
 
 import java.util.List;
 
 public interface UserApi {
-
     List<User> getUsers();
 
     User getUserById(int userId);
