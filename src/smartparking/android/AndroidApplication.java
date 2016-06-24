@@ -1,8 +1,8 @@
 package smartparking.android;
 
+import smartparking.api.UserApi;
+import smartparking.api.impl.UserApiImpl;
 import smartparking.model.User;
-import smartparking.rest.UserApi;
-import smartparking.rest.impl.UserApiImpl;
 
 public class AndroidApplication {
     private UserApi userApi;

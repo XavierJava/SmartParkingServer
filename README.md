@@ -1,12 +1,4 @@
 # README
-src/smartparking/API/m下的类供客户端调用
-src/smartparking/common下是服务器配置类
-src/smartparking/dao下是操作数据库的类
-src/smartparking/model下是模型类
-src/smartparking/resource/common/m下是客户端使用的服务器资源接口
-src/smartparking/resource/m下是供客户端使用的服务器资源
-
-其他文件是浏览器访问所需的类
 
 ## 项目名称
 
@@ -19,6 +11,22 @@ src/smartparking/resource/m下是供客户端使用的服务器资源
 ## 模块组成
 
 服务器 & 客户端
+
+## 项目文件结构
+
+doc/ - 项目文档
+
+lib/ - 项目用到的第三方JAR包
+
+src/smartparking/android/  - Android示例程序
+src/smartparking/api/ - REST API层
+src/smartparking/common/ - 公共配置
+src/smartparking/dao/ - 数据访问对象层
+src/smartparking/model/ - 模型层
+src/smartparking/resources/ - REST服务器资源层
+src/smartparking/SmartParkingServer/ - SmartParking服务器
+
+test/smartparking/api - REST API层测试
 
 ## 主要技术
 
@@ -70,11 +78,11 @@ https://github.com/mcai/SmartParkingServer.git
 
 ## TODOs
 
-* 所有核心代码和测试代码增加中文注释
+* 在所有核心代码和测试代码中增加中文注释。
 
-* 增加分页和排序功能
+* 在数据访问对象层、REST服务器资源层和REST API层增加分页和排序功能。
 
-* 在写每个测试时，应确保测试的完整性和可重复性，即不要假设在测试之前数据库中已存在某些数据，而应该在做测试之前(如@Before setUp()方法体内)准备好数据
+* 在写每个测试时，应确保测试的完整性和可重复性，即不要假设在测试之前数据库中已存在某些数据，而应在做测试之前(如@Before setUp()方法体内)准备好数据。
 
 
 

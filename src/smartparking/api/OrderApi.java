@@ -1,4 +1,4 @@
-package smartparking.rest;
+package smartparking.api;
 
 import smartparking.model.Order;
 

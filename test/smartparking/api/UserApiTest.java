@@ -1,9 +1,9 @@
-package smartparking.rest;
+package smartparking.api;
 
 import org.junit.Before;
 import org.junit.Test;
+import smartparking.api.impl.UserApiImpl;
 import smartparking.model.User;
-import smartparking.rest.impl.UserApiImpl;
 
 import java.io.IOException;
 

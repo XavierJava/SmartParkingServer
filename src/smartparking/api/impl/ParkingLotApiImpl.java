@@ -1,14 +1,14 @@
-package smartparking.rest.impl;
+package smartparking.api.impl;
 
 import org.restlet.Client;
 import org.restlet.Context;
 import org.restlet.data.Protocol;
 import org.restlet.resource.ClientResource;
+import smartparking.api.ParkingLotApi;
 import smartparking.model.ParkingLot;
 import smartparking.resources.NearbyParkingLotsResource;
 import smartparking.resources.ParkingLotResource;
 import smartparking.resources.ParkingLotsResource;
-import smartparking.rest.ParkingLotApi;
 
 import java.util.List;
 

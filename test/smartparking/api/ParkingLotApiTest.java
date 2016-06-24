@@ -1,8 +1,8 @@
-package smartparking.rest;
+package smartparking.api;
 
 import org.junit.Test;
+import smartparking.api.impl.ParkingLotApiImpl;
 import smartparking.model.ParkingLot;
-import smartparking.rest.impl.ParkingLotApiImpl;
 
 public class ParkingLotApiTest {
     private ParkingLotApi parkingLotApi = new ParkingLotApiImpl();

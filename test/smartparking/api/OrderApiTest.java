@@ -1,11 +1,11 @@
-package smartparking.rest;
+package smartparking.api;
 
 import org.junit.Before;
 import org.junit.Test;
+import smartparking.api.impl.OrderApiImpl;
 import smartparking.model.Order;
 import smartparking.model.ParkingLot;
 import smartparking.model.User;
-import smartparking.rest.impl.OrderApiImpl;
 
 public class OrderApiTest {
     private OrderApi orderApi = new OrderApiImpl();
