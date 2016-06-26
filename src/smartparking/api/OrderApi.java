@@ -4,16 +4,24 @@ import smartparking.model.Order;
 
 import java.util.List;
 
-public interface OrderApi {
-    List<Order> getOrders();
+/**
+ * 订单api
+ */
 
+
+public interface OrderApi {
+    /**
+     * @return
+     */
     Order getOrderById(int OrderId);
 
-    List<Order> getOrdersByUserId(int userId);
+    List<Order> getOrders(int page, int count);
 
-    List<Order> getOrdersByParkingLotId(int parkingLotId);
+    List<Order> getOrdersByUserId(int userId, int page, int count);
 
-    List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId);
+    List<Order> getOrdersByParkingLotId(int parkingLotId, int page, int count);
+
+    List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId, int page, int count);
 
     int addOrder(Order order);
 

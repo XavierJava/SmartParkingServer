@@ -19,8 +19,8 @@ public class UserApiImpl implements UserApi {
     }
 
     @Override
-    public List<User> getUsers() {
-        UsersResource usersResource = service.getChild("/users", UsersResource.class);
+    public List<User> getUsers(int page, int count) {
+        UsersResource usersResource = service.getChild("/users?p=" + page + "&c=" + count, UsersResource.class);
         return usersResource.getUsers();
     }
 

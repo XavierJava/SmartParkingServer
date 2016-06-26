@@ -32,8 +32,8 @@ public class ParkingLotApiImpl implements ParkingLotApi {
     }
 
     @Override
-    public List<ParkingLot> getParkingLots() {
-        ParkingLotsResource parkingLotsResource = service.getChild("/parking_lots", ParkingLotsResource.class);
+    public List<ParkingLot> getParkingLots(int page, int count) {
+        ParkingLotsResource parkingLotsResource = service.getChild("/parking_lots?p=" + page + "&c=" + count, ParkingLotsResource.class);
         return parkingLotsResource.getParkingLots();
     }
 

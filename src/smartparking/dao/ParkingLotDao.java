@@ -9,7 +9,7 @@ public interface ParkingLotDao {
 
     ParkingLot getParkingLotByName(String name);
 
-    List<ParkingLot> getParkingLots();
+    List<ParkingLot> getParkingLots(long offset, long limit);
 
     List<ParkingLot> getNearParkingLots(double longitude, double latitude, int kilometers);
 

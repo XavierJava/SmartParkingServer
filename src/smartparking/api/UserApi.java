@@ -5,7 +5,7 @@ import smartparking.model.User;
 import java.util.List;
 
 public interface UserApi {
-    List<User> getUsers();
+    List<User> getUsers(int page, int count);
 
     User getUserById(int userId);
 

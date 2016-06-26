@@ -7,25 +7,25 @@ import smartparking.dao.impl.ParkingLotDaoImpl;
 
 @DatabaseTable(tableName = "t_parkingLots", daoClass = ParkingLotDaoImpl.class)
 public class ParkingLot {
-    @DatabaseField(generatedId = true)
+    @DatabaseField(generatedId = true, dataType = DataType.INTEGER)
     private int id;
-    @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
+    @DatabaseField(canBeNull = false, dataType = DataType.STRING)
     private String name;
-    @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
+    @DatabaseField(canBeNull = false, dataType = DataType.STRING)
     private String address;
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = DataType.DOUBLE)
     private double longitude;
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = DataType.DOUBLE)
     private double latitude;
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = DataType.INTEGER)
     private int totalSpaces;
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = DataType.INTEGER)
     private int availableSpaces;
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = DataType.DOUBLE)
     private double hourlyPrice;
-    @DatabaseField(dataType = DataType.STRING_BYTES)
+    @DatabaseField(dataType = DataType.STRING)
     private String openingHours;
-    @DatabaseField(dataType = DataType.STRING_BYTES)
+    @DatabaseField(dataType = DataType.STRING)
     private String notice;
     @DatabaseField(persisted = false)
     private double distance;

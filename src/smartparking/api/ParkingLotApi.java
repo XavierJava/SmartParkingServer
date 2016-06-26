@@ -9,7 +9,7 @@ public interface ParkingLotApi {
 
     ParkingLot getParkingLotByName(String name);
 
-    List<ParkingLot> getParkingLots();
+    List<ParkingLot> getParkingLots(int page, int count);
 
     List<ParkingLot> getNearParkingLots(double longitude, double altitude, int radius);
 

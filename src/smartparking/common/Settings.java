@@ -12,17 +12,18 @@ import smartparking.dao.impl.UserDaoImpl;
 import java.sql.SQLException;
 
 public class Settings {
-    private static final String databaseUrl = "jdbc:mysql://localhost:3306/smartparking";
+    private static final String databaseUrl = "jdbc:mysql://localhost:3306/smartparking?useUnicode=true&characterEncoding=UTF-8";
     private static final String username = "root";
     private static final String password = "chenhuan";
 
     private static ParkingLotDao parkingLotDao;
     private static UserDao userDao;
     private static OrderDao orderDao;
+    private static ConnectionSource connectionSource;
 
     static {
         try {
-            ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl, username, password);
+            connectionSource = new JdbcConnectionSource(databaseUrl, username, password);
             parkingLotDao = new ParkingLotDaoImpl(connectionSource);
             userDao = new UserDaoImpl(connectionSource);
             orderDao = new OrderDaoImpl(connectionSource);
@@ -31,15 +32,19 @@ public class Settings {
         }
     }
 
-    public static ParkingLotDao getParkingLotDao() {
+    public static ConnectionSource getConnectionSource() {
+        return connectionSource;
+    }
+
+    public static synchronized ParkingLotDao getParkingLotDao() {
         return parkingLotDao;
     }
 
-    public static UserDao getUserDao() {
+    public static synchronized UserDao getUserDao() {
         return userDao;
     }
 
-    public static OrderDao getOrderDao() {
+    public static synchronized OrderDao getOrderDao() {
         return orderDao;
     }
 }

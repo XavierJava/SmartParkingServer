@@ -15,6 +15,7 @@ public class SmartParkingServer extends Application {
         setDescription("Smart Parking Server.");
         setOwner("BJUT Smart Parking Team");
         setAuthor("BJUT Smart Parking Team");
+
     }
 
     public static void main(String[] args) throws Exception {

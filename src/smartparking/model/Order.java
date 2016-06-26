@@ -9,7 +9,7 @@ import java.util.Date;
 
 @DatabaseTable(tableName = "t_orders", daoClass = OrderDaoImpl.class)
 public class Order {
-    @DatabaseField(generatedId = true)
+    @DatabaseField(generatedId = true, dataType = DataType.INTEGER)
     private int id;
 
     @DatabaseField(canBeNull = false, foreign = true, columnName = "id_lot")
@@ -21,10 +21,10 @@ public class Order {
     @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING, format = "yyyy-MM-dd HH:mm:ss")
     private Date date;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = DataType.DOUBLE)
     private double amount;
 
-    @DatabaseField
+    @DatabaseField(dataType = DataType.BOOLEAN)
     private boolean paid;
 
     public Order() {

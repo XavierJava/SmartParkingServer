@@ -16,45 +16,40 @@ public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> implemen
         super(connectionSource, ParkingLot.class);
     }
 
-    @Override
-    public List<ParkingLot> getParkingLots() {
-        List<ParkingLot> list = null;
-        try {
-            list = queryForAll();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return list;
-    }
 
     @Override
     public ParkingLot getParkingLotById(int id) {
-        ParkingLot parkingLot = null;
         try {
-            parkingLot = super.queryForId(id);
+            return queryForId(id);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return parkingLot;
     }
 
     @Override
     public ParkingLot getParkingLotByName(String name) {
-        ParkingLot parkingLot = null;
-
-
         try {
             List<ParkingLot> list = queryForEq("name", name);
-            parkingLot = list != null ? list.get(0) : null;
+            return list != null && list.size() > 0 ? list.get(0) : null;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return parkingLot;
+    }
+
+    @Override
+    public List<ParkingLot> getParkingLots(long offset, long limit) {
+        try {
+            return queryBuilder().offset(offset).limit(limit).query();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
     }
 
     @Override
     public List<ParkingLot> getNearParkingLots(double MyLatitude, double MyLongitude, int distance) {//乱码
-        List<ParkingLot> results = null;
         try {
             String sql = "SELECT pklt.*,6371 * 2 * ASIN(SQRT(POWER(SIN((" +
                     MyLatitude + "-latitude) *pi()/180 / 2), 2) +COS(" + MyLatitude +
@@ -78,43 +73,40 @@ public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> implemen
                                     return parkingLot;
                                 }
                             });
-            results = rawResults.getResults();
+            return rawResults.getResults();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return results;
     }
 
     @Override
     public int addParkingLot(ParkingLot parkLot) {
-        int flag = 0;
         try {
-            flag = create(parkLot);
+            return create(parkLot);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 
     @Override
     public int updateParkingLot(ParkingLot parkingLot) {
-        int flag = 0;
         try {
-            flag = update(parkingLot);
+            return update(parkingLot);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 
     @Override
     public int removeParkingLotById(int id) {
-        int flag = 0;
         try {
-            flag = deleteById(id);
+            return deleteById(id);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 }

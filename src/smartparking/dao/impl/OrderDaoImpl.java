@@ -17,97 +17,95 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
     }
 
     @Override
-    public List<Order> getOrders() {
-        List<Order> list = null;
-
+    public List<Order> getOrders(long offset, long limit) {
         try {
-            list = queryForAll();
+            return queryBuilder().offset(offset).limit(limit).query();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return list;
     }
 
     @Override
-    public Order getOrderById(int OrderId) {
-        Order order = null;
-        try {
-            order = queryForId(OrderId);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return order;
-    }
-
-    @Override
-    public List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId) {
-        List<Order> orderList = null;
+    public List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId, long offset, long limit) {
         QueryBuilder<Order, Integer> queryBuilder = this.queryBuilder();
         Where<Order, Integer> where = queryBuilder.where();
 
         try {
             where.and(where.eq("id_user", userId), where.eq("id_lot", parkingLotId));
-            PreparedQuery<Order> preparedQuery = queryBuilder.prepare();
-            orderList = this.query(preparedQuery);
+            PreparedQuery<Order> preparedQuery = queryBuilder.offset(offset).limit(limit).prepare();
+            return query(preparedQuery);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return orderList;
-
     }
 
     @Override
-    public List<Order> getOrdersByUserId(int userId) {
-        List<Order> list = null;
+    public List<Order> getOrdersByUserId(int userId, long offset, long limit) {
+        QueryBuilder<Order, Integer> queryBuilder = this.queryBuilder();
+        Where<Order, Integer> where = queryBuilder.where();
         try {
-            list = queryForEq("id_user", userId);
+            where.eq("id_user", userId);
+            PreparedQuery<Order> preparedQuery = queryBuilder.offset(offset).limit(limit).prepare();
+            return this.query(preparedQuery);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return list;
     }
 
     @Override
-    public List<Order> getOrdersByParkingLotId(int parkingLotId) {
-        List<Order> list = null;
+    public List<Order> getOrdersByParkingLotId(int parkingLotId, long offset, long limit) {
+        QueryBuilder<Order, Integer> queryBuilder = this.queryBuilder();
+        Where<Order, Integer> where = queryBuilder.where();
         try {
-            list = queryForEq("id_lot", parkingLotId);
+            where.eq("id_user", parkingLotId);
+            PreparedQuery<Order> preparedQuery = queryBuilder.offset(offset).limit(limit).prepare();
+            return this.query(preparedQuery);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return list;
+    }
+
+    @Override
+    public Order getOrderById(int OrderId) {
+        try {
+            return queryForId(OrderId);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
     }
 
     @Override
     public int addOrder(Order order) {
-        int flag = 0;
         try {
-            flag = create(order);
+            return create(order);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 
     @Override
     public int updateOrder(Order order) {
-        int flag = 0;
         try {
-            flag = update(order);
+            return update(order);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 
     @Override
     public int removeOrderById(int id) {
-        int flag = 0;
         try {
-            flag = deleteById(id);
+            return deleteById(id);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 }

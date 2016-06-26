@@ -12,6 +12,8 @@ public class OrderApiTest {
     private Order order = new Order();
     private User user = new User();
     private ParkingLot parkingLot = new ParkingLot();
+    private int page = 1;
+    private int count = 3;
 
     @Before
     public void setUp() {
@@ -29,7 +31,7 @@ public class OrderApiTest {
 
     @Test
     public void testGetOrders() {
-        assert orderApi.getOrders().size() > 0;
+        assert orderApi.getOrders(page, count).size() > 0;
     }
 
     @Test
@@ -39,17 +41,17 @@ public class OrderApiTest {
 
     @Test
     public void testGetOrdersByUserId() {
-        assert orderApi.getOrdersByUserId(5).size() == 0;
+        assert orderApi.getOrdersByUserId(5, page, count).size() == 0;
     }
 
     @Test
     public void testGetOrdersByParkingLotId() {
-        assert orderApi.getOrdersByParkingLotId(1).size() > 0;
+        assert orderApi.getOrdersByParkingLotId(1, page, count).size() > 0;
     }
 
     @Test
     public void testOrderByUserIdAndParkingLotId() {
-        assert orderApi.getOrderByUserIdAndParkingLotId(2, 1).size() > 0;
+        assert orderApi.getOrderByUserIdAndParkingLotId(2, 1, page, count).size() > 0;
     }
 
     @Test

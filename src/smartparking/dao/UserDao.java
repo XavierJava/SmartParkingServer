@@ -4,7 +4,7 @@ import smartparking.model.User;
 
 import java.util.List;
 public interface UserDao {
-    List<User> getUsers();
+    List<User> getUsers(long offset, long limit);
 
     User getUserById(int userId);
 

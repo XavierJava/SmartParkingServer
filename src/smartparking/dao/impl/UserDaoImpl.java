@@ -14,10 +14,10 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
     }
 
     @Override
-    public List<User> getUsers() {
+    public List<User> getUsers(long offset, long limit) {
         List<User> list = null;
         try {
-            list = queryForAll();
+            list = queryBuilder().offset(offset).limit(limit).query();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -26,20 +26,21 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
 
     @Override
     public User getUserById(int userId) {
-        User user = null;
         try {
-            user = queryForId(userId);
+            return queryForId(userId);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return user;
     }
 
     @Override
     public User getUserByName(String name) {
         User user = null;
         try {
-            user = queryForEq("name", name).get(0);
+            List<User> list = queryForEq("name", name);
+            if (list != null && list.size() > 0)
+                user = list.get(0);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -54,28 +55,27 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+
         return flag;
     }
 
     @Override
     public int updateUser(User user) {
-        int flag = 0;
         try {
-            flag = update(user);
+            return update(user);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 
     @Override
     public int removeUserById(int id) {
-        int flag = 0;
         try {
-            flag = deleteById(id);
+            return deleteById(id);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-        return flag;
     }
 }

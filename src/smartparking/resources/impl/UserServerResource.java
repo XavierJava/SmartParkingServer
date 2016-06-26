@@ -5,6 +5,9 @@ import smartparking.common.Settings;
 import smartparking.model.User;
 import smartparking.resources.UserResource;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
 public class UserServerResource extends ServerResource implements UserResource {
     private String idOrName;
     private String q;
@@ -12,9 +15,13 @@ public class UserServerResource extends ServerResource implements UserResource {
     @Override
     protected void doInit() {
         super.doInit();
-        idOrName = getAttribute("idOrName");
+        try {
+            idOrName = URLDecoder.decode(getAttribute("idOrName"), "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         q = getQueryValue("q");
-        System.out.println("mUserServerResource:q=" + q + "idOrName=" + idOrName);
+        System.out.println("mUserServerResource:q=" + q + "   idOrName=" + idOrName);
     }
 
 

@@ -7,6 +7,9 @@ import smartparking.dao.ParkingLotDao;
 import smartparking.model.ParkingLot;
 import smartparking.resources.ParkingLotResource;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
 public class ParkingLotServerResource extends ServerResource implements ParkingLotResource {
     private ParkingLotDao parkingLotDao;
 
@@ -16,10 +19,12 @@ public class ParkingLotServerResource extends ServerResource implements ParkingL
     @Override
     protected void doInit() throws ResourceException {
         super.doInit();
-
         parkingLotDao = Settings.getParkingLotDao();
-
-        idOrName = getAttribute("idOrName");
+        try {
+            idOrName = URLDecoder.decode(getAttribute("idOrName"), "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         q = getQueryValue("q");
     }
 

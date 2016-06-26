@@ -13,13 +13,15 @@ public class UserApiTest {
 
     @Before
     public void setUp() throws Exception {
-        user.setName("huanhuan3");
+        user.setName("bjut");
         user.setPassword("123");
     }
 
     @Test
     public void testGetUsers() {
-        assert userApi.getUsers().size() > 6;
+        int page = 1;
+        int count = 3;
+        assert userApi.getUsers(page, count).size() > 6;
     }
 
     @Test
@@ -35,7 +37,7 @@ public class UserApiTest {
 
     @Test
     public void testGetUserByName() {
-        User user = userApi.getUserByName("huanhuan1");
+        User user = userApi.getUserByName("bjut");
         assert user != null;
     }
 

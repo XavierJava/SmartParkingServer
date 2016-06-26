@@ -19,12 +19,6 @@ public class OrderApiImpl implements OrderApi {
     }
 
     @Override
-    public List<Order> getOrders() {
-        OrdersResource ordersResource = service.getChild("/orders", OrdersResource.class);
-        return ordersResource.getOrders();
-    }
-
-    @Override
     public Order getOrderById(int orderId) {
         OrderResource orderResource = service.getChild("/order/" + orderId, OrderResource.class);
         return orderResource.getOrder();
@@ -32,20 +26,27 @@ public class OrderApiImpl implements OrderApi {
 
 
     @Override
-    public List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId) {
-        OrdersResource ordersResource = service.getChild("/orders/" + userId + "/" + parkingLotId, OrdersResource.class);
+    public List<Order> getOrders(int page, int count) {
+        OrdersResource ordersResource = service.getChild("/orders?p=" + page + "&c=" + count, OrdersResource.class);
+        return ordersResource.getOrders();
+    }
+
+
+    @Override
+    public List<Order> getOrderByUserIdAndParkingLotId(int userId, int parkingLotId, int page, int count) {
+        OrdersResource ordersResource = service.getChild("/orders/" + userId + "/" + parkingLotId + "?p=" + page + "&c=" + count, OrdersResource.class);
         return ordersResource.getOrders();
     }
 
     @Override
-    public List<Order> getOrdersByUserId(int userId) {
-        OrdersResource ordersResource = service.getChild("/orders/" + userId + "?q=user", OrdersResource.class);
+    public List<Order> getOrdersByUserId(int userId, int page, int count) {
+        OrdersResource ordersResource = service.getChild("/orders/" + userId + "?q=user&p=" + page + "&c=" + count, OrdersResource.class);
         return ordersResource.getOrders();
     }
 
     @Override
-    public List<Order> getOrdersByParkingLotId(int parkingLotId) {
-        OrdersResource ordersResource = service.getChild("/orders/" + parkingLotId + "?q=parkingLot", OrdersResource.class);
+    public List<Order> getOrdersByParkingLotId(int parkingLotId, int page, int count) {
+        OrdersResource ordersResource = service.getChild("/orders/" + parkingLotId + "?q=parkingLot&p=" + page + "&c=" + count, OrdersResource.class);
         return ordersResource.getOrders();
     }
 

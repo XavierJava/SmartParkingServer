@@ -13,27 +13,27 @@ import java.util.Date;
 
 @DatabaseTable(tableName = "t_users", daoClass = UserDaoImpl.class)
 public class User {
-    @DatabaseField(generatedId = true)
+    @DatabaseField(generatedId = true, dataType = DataType.INTEGER)
     private int id;
-    @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES)
+    @DatabaseField(canBeNull = false, dataType = DataType.STRING)
     private String name;
-    @DatabaseField(canBeNull = false, dataType = DataType.STRING_BYTES, columnName = "pswd")
+    @DatabaseField(canBeNull = false, columnName = "pswd", dataType = DataType.STRING)
     private String password;
-    @DatabaseField(unique = true, index = true)
+    @DatabaseField(unique = true, index = true, dataType = DataType.STRING)
     private String idNo;
-    @DatabaseField(dataType = DataType.STRING_BYTES)
+    @DatabaseField(dataType = DataType.STRING)
     private String plateNumber;
-    @DatabaseField
-    private Boolean gender;
-    @DatabaseField(dataType = DataType.DATE_STRING)
+    @DatabaseField(dataType = DataType.BOOLEAN)
+    private boolean gender;
+    @DatabaseField(dataType = DataType.DATE_STRING, format = "yyyy-MM-dd HH:mm:ss")
     private Date regDate;
-    @DatabaseField(index = true)
+    @DatabaseField(index = true, dataType = DataType.STRING)
     private String email;
-    @DatabaseField(index = true)
+    @DatabaseField(index = true, dataType = DataType.STRING)
     private String phone;
-    @DatabaseField
+    @DatabaseField(dataType = DataType.INTEGER)
     private int howActivate;
-    @DatabaseField
+    @DatabaseField(dataType = DataType.INTEGER)
     private int IPLevel;
 
     public User() {
