@@ -6,23 +6,28 @@ import smartparking.dao.OrderDao;
 import smartparking.model.Order;
 import smartparking.resources.OrderResource;
 
+/**
+ * 订单的服务器资源
+ */
 public class OrderServerResource extends ServerResource implements OrderResource {
     private OrderDao orderDao;
+    private String orderId;//订单编号
 
-    private String orderId;
-
+    /**
+     * 初始化资源
+     */
     @Override
     public void doInit() {
         super.doInit();
-
         orderDao = Settings.getOrderDao();
-
-        orderId = getAttribute("orderId");
-
-        System.out.println("订单id:" + orderId);
+        orderId = getAttribute("orderId");//获取URI中的参数
     }
 
-
+    /**
+     * 获取指定编号的订单
+     *
+     * @return 订单对象
+     */
     @Override
     public Order getOrder() {
 
@@ -31,6 +36,10 @@ public class OrderServerResource extends ServerResource implements OrderResource
         return order;
     }
 
+    /**
+     * 删除指定编号的订单
+     * @return 删除成功1, 失败0
+     */
 
     @Override
     public int removeOrder() {

@@ -21,7 +21,6 @@ public class UserServerResource extends ServerResource implements UserResource {
             e.printStackTrace();
         }
         q = getQueryValue("q");
-        System.out.println("mUserServerResource:q=" + q + "   idOrName=" + idOrName);
     }
 
 

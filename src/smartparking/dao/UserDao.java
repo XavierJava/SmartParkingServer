@@ -3,6 +3,10 @@ package smartparking.dao;
 import smartparking.model.User;
 
 import java.util.List;
+
+/**
+ * 用户表的数据库访问对象
+ */
 public interface UserDao {
     List<User> getUsers(long offset, long limit);
 

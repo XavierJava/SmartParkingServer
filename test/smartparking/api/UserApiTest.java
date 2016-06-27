@@ -21,12 +21,12 @@ public class UserApiTest {
     public void testGetUsers() {
         int page = 1;
         int count = 3;
-        assert userApi.getUsers(page, count).size() > 6;
+        assert userApi.getUsers(page, count).size() == 3;
     }
 
     @Test
     public void testAddUser() {
-        assert userApi.addUser(user) > 0;
+        assert userApi.addUser(user) == 4;
     }
 
     @Test

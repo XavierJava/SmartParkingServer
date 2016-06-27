@@ -8,14 +8,17 @@ import smartparking.resources.OrdersResource;
 
 import java.util.List;
 
+/**
+ * 订单的服务器资源
+ */
 public class OrdersServerResource extends ServerResource implements OrdersResource {
     private OrderDao orderDao;
     /**
-     * URI某一用户id或某一停车场id
+     * URI中某一用户id或某一停车场id
      */
     private String userIdOrParkingLotId;
     /**
-     * URL查询参数,根据用户id还是停车场id
+     * URL查询字段,根据用户id还是停车场id
      */
     private String queryFor;
     /**
@@ -32,23 +35,40 @@ public class OrdersServerResource extends ServerResource implements OrdersResour
      */
     private String count;
 
+    /**
+     * 初始化资源
+     */
     @Override
     public void doInit() {
         super.doInit();
+        orderDao = Settings.getOrderDao();
+        /**
+         * 获取URI中的参数
+         */
         userIdOrParkingLotId = getAttribute("userIdOrParkingLotId");
         userId = getAttribute("userId");
         parkingLotId = getAttribute("parkingLotId");
+        /**
+         * 获取URI后面的查询字段
+         */
         queryFor = getQueryValue("q");
         page = getQueryValue("p");
         count = getQueryValue("c");
-        orderDao = Settings.getOrderDao();
     }
 
+    /**
+     * 所有订单
+     *
+     * @return 订单对象的list
+     */
     @Override
     public List<Order> getOrders() {
-        int page = 1;
-        long limit = 10l;
-        long offset = 1;
+        int page = 1;//默认页号
+        long limit = 10l;//每页的默认的显示数量
+        long offset = 1;//默认偏移量
+        /**
+         * 根据设置和查询字段设置偏移量和每页的显示数量
+         */
         if (this.page != null && this.page.matches("^[0-9]*[1-9][0-9]*$")) {
             page = Integer.parseInt(this.page);
         }
@@ -57,6 +77,9 @@ public class OrdersServerResource extends ServerResource implements OrdersResour
             limit = Long.parseLong(this.count);
         }
         offset = (page - 1) * limit + 1;
+        /**
+         * 根据参数执行查询计划
+         */
         if (userIdOrParkingLotId == null) {
             return orderDao.getOrders(offset, limit);
         }
@@ -72,11 +95,21 @@ public class OrdersServerResource extends ServerResource implements OrdersResour
             return null;
     }
 
+    /**
+     * 新建订单
+     * @param order 将要新建订单的对象
+     * @return 数据库分配给新订单的编号
+     */
     @Override
     public int addOrder(Order order) {
         return orderDao.addOrder(order);
     }
 
+    /***
+     * 更新订单
+     * @param order 带有新信息的订单对象
+     * @return 成功则1, 失败则0
+     */
     @Override
     public int updateOrder(Order order) {
 

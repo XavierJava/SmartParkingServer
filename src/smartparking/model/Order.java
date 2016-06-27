@@ -7,6 +7,9 @@ import smartparking.dao.impl.OrderDaoImpl;
 
 import java.util.Date;
 
+/**
+ * 订单类
+ */
 @DatabaseTable(tableName = "t_orders", daoClass = OrderDaoImpl.class)
 public class Order {
     @DatabaseField(generatedId = true, dataType = DataType.INTEGER)

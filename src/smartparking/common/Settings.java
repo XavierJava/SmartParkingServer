@@ -11,16 +11,30 @@ import smartparking.dao.impl.UserDaoImpl;
 
 import java.sql.SQLException;
 
+/**
+ * 全局设置
+ */
 public class Settings {
+    /**
+     * 数据库链接参数
+     */
     private static final String databaseUrl = "jdbc:mysql://localhost:3306/smartparking?useUnicode=true&characterEncoding=UTF-8";
     private static final String username = "root";
     private static final String password = "chenhuan";
-
+    /**
+     * 数据库访问对象
+     */
     private static ParkingLotDao parkingLotDao;
     private static UserDao userDao;
     private static OrderDao orderDao;
+    /**
+     * 链接源
+     */
     private static ConnectionSource connectionSource;
 
+    /**
+     * 静态初始化各实例
+     */
     static {
         try {
             connectionSource = new JdbcConnectionSource(databaseUrl, username, password);

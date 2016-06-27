@@ -7,6 +7,9 @@ import smartparking.model.ParkingLot;
 
 import java.util.List;
 
+/**
+ * 获取停车场,新建停车场,更新停车场的接口
+ */
 
 public interface ParkingLotsResource {
     @Get

@@ -15,13 +15,12 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
 
     @Override
     public List<User> getUsers(long offset, long limit) {
-        List<User> list = null;
         try {
-            list = queryBuilder().offset(offset).limit(limit).query();
+            return queryBuilder().offset(offset).limit(limit).query();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return list;
     }
 
     @Override
@@ -36,27 +35,24 @@ public class UserDaoImpl extends BaseDaoImpl<User, Integer> implements UserDao {
 
     @Override
     public User getUserByName(String name) {
-        User user = null;
         try {
             List<User> list = queryForEq("name", name);
-            if (list != null && list.size() > 0)
-                user = list.get(0);
+            return list != null && list.size() > 0 ? list.get(0) : null;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return null;
         }
-        return user;
     }
 
     @Override
     public int addUser(User user) {
-        int flag = 0;
         try {
-            flag = create(user);
+            create(user);
+            return user.getId();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
-
-        return flag;
     }
 
     @Override

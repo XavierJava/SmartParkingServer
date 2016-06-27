@@ -83,7 +83,8 @@ public class ParkingLotDaoImpl extends BaseDaoImpl<ParkingLot, Integer> implemen
     @Override
     public int addParkingLot(ParkingLot parkLot) {
         try {
-            return create(parkLot);
+            create(parkLot);
+            return parkLot.getId();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return 0;

@@ -48,7 +48,7 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
         try {
             where.eq("id_user", userId);
             PreparedQuery<Order> preparedQuery = queryBuilder.offset(offset).limit(limit).prepare();
-            return this.query(preparedQuery);
+            return query(preparedQuery);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
@@ -62,7 +62,7 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
         try {
             where.eq("id_user", parkingLotId);
             PreparedQuery<Order> preparedQuery = queryBuilder.offset(offset).limit(limit).prepare();
-            return this.query(preparedQuery);
+            return query(preparedQuery);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
@@ -82,7 +82,8 @@ public class OrderDaoImpl extends BaseDaoImpl<Order, Integer> implements OrderDa
     @Override
     public int addOrder(Order order) {
         try {
-            return create(order);
+            create(order);
+            return order.getId();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return 0;
