@@ -40,7 +40,7 @@ public class ParkingLotsServerResource extends ServerResource implements Parking
         if (this.count != null && this.count.matches("^[0-9]*[1-9][0-9]*$")) {
             limit = Long.parseLong(this.count);
         }
-        offset = (page - 1) * limit + 1;
+        offset = (page - 1) * limit;
         return parkingLotDao.getParkingLots(offset, limit);
     }
 

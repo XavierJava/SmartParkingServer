@@ -1,6 +1,5 @@
 package smartparking.api;
 
-import org.junit.Before;
 import org.junit.Test;
 import smartparking.api.impl.OrderApiImpl;
 import smartparking.model.Order;
@@ -9,60 +8,113 @@ import smartparking.model.User;
 
 public class OrderApiTest {
     private OrderApi orderApi = new OrderApiImpl();
-    private Order order = new Order();
-    private User user = new User();
-    private ParkingLot parkingLot = new ParkingLot();
     private int page = 1;
     private int count = 3;
 
-    @Before
-    public void setUp() {
-        user.setId(3);
-        parkingLot.setId(3);
-        order.setAmount(54);
-        order.setUser(user);
-        order.setParkingLot(parkingLot);
-    }
-
     @Test
     public void testAddOrder() {
-        assert orderApi.addOrder(order) > 0;
+        User user = new User();
+        user.setId(1);
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setId(1);
+        Order order = new Order();
+        order.setAmount(22.0);
+        order.setUser(user);
+        order.setParkingLot(parkingLot);
+        assert orderApi.addOrder(order) >= 1;
     }
-
-    @Test
-    public void testGetOrders() {
-        assert orderApi.getOrders(page, count).size() > 0;
-    }
-
     @Test
     public void testGetOrderById() {
-        assert orderApi.getOrderById(6) != null;
+        User user = new User();
+        user.setId(2);
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setId(2);
+        Order order = new Order();
+        order.setAmount(33.0);
+        order.setUser(user);
+        order.setParkingLot(parkingLot);
+        assert orderApi.getOrderById(orderApi.addOrder(order)).getUser().getId() == 2;
     }
+
+    @Test(timeout = 5000l)
+    public void testGetOrders() {
+        assert orderApi.getOrders(page, count).size() == count;
+    }
+
 
     @Test
     public void testGetOrdersByUserId() {
-        assert orderApi.getOrdersByUserId(5, page, count).size() == 0;
+        User user = new User();
+        user.setId(16);
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setId(16);
+        Order order = new Order();
+        order.setAmount(33.0);
+        order.setUser(user);
+        order.setParkingLot(parkingLot);
+        orderApi.addOrder(order);
+        orderApi.addOrder(order);
+        orderApi.addOrder(order);
+        assert orderApi.getOrdersByUserId(16, 2, 2).size() == 1;
     }
 
     @Test
     public void testGetOrdersByParkingLotId() {
-        assert orderApi.getOrdersByParkingLotId(1, page, count).size() > 0;
+        User user = new User();
+        user.setId(7);
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setId(7);
+        Order order = new Order();
+        order.setAmount(22.0);
+        order.setUser(user);
+        order.setParkingLot(parkingLot);
+        orderApi.addOrder(order);
+        orderApi.addOrder(order);
+        orderApi.addOrder(order);
+        assert orderApi.getOrdersByParkingLotId(7, page, count).size() == count;
     }
 
     @Test
     public void testOrderByUserIdAndParkingLotId() {
-        assert orderApi.getOrderByUserIdAndParkingLotId(2, 1, page, count).size() > 0;
+        User user = new User();
+        user.setId(8);
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setId(8);
+        Order order = new Order();
+        order.setAmount(22.0);
+        order.setUser(user);
+        order.setParkingLot(parkingLot);
+        orderApi.addOrder(order);
+        orderApi.addOrder(order);
+        orderApi.addOrder(order);
+        assert orderApi.getOrderByUserIdAndParkingLotId(8, 8, page, count).size() == count;
     }
 
     @Test
     public void testUpdateOrder() {
-        order.setId(8);
-        order.setPaid(true);
-        assert orderApi.updateOrder(order) > 0;
+        User user = new User();
+        user.setId(3);
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setId(3);
+        Order order = new Order();
+        order.setAmount(11.0);
+        order.setUser(user);
+        order.setParkingLot(parkingLot);
+        Order order1 = orderApi.getOrderById(orderApi.addOrder(order));
+        order1.setPaid(true);
+        assert orderApi.updateOrder(order1) == 1;
     }
 
     @Test
     public void testRemoveOrder() {
-        assert orderApi.removeOrderById(4) > 0;
+        User user = new User();
+        user.setId(4);
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setId(4);
+        Order order = new Order();
+        order.setAmount(22.0);
+        order.setUser(user);
+        order.setParkingLot(parkingLot);
+        assert orderApi.removeOrderById(orderApi.addOrder(order)) == 1;
     }
 }

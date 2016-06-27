@@ -76,7 +76,7 @@ public class OrdersServerResource extends ServerResource implements OrdersResour
         if (this.count != null && this.count.matches("^[0-9]*[1-9][0-9]*$")) {
             limit = Long.parseLong(this.count);
         }
-        offset = (page - 1) * limit + 1;
+        offset = (page - 1) * limit;
         /**
          * 根据参数执行查询计划
          */

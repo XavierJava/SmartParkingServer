@@ -32,7 +32,7 @@ public class UsersServerResource extends ServerResource implements UsersResource
     public List getUsers() {
         int page = 1;
         long limit = 10l;
-        long offset = 1;
+        long offset;
         if (this.page != null && this.page.matches("^[0-9]*[1-9][0-9]*$")) {
             page = Integer.parseInt(this.page);
         }
@@ -40,7 +40,7 @@ public class UsersServerResource extends ServerResource implements UsersResource
         if (this.count != null && this.count.matches("^[0-9]*[1-9][0-9]*$")) {
             limit = Long.parseLong(this.count);
         }
-        offset = (page - 1) * limit + 1;
+        offset = (page - 1) * limit;
         return userDao.getUsers(offset, limit);
     }
 
